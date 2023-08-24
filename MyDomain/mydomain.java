@@ -1,4 +1,5 @@
 import java.util.*;
+
 class odd_even
 {
     public static void main(String args[])
@@ -15,122 +16,114 @@ class odd_even
     }
 }
 
-class leapyear_1
-{
-    public static void main(String args[])
-    {
+class leapyear_1 {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int year;
         System.out.println("Enter the year");
         year = in.nextInt();
-        if(year%4==0)
-        System.out.println("This year is a leap year");
-        else 
-        System.out.println("This year is not a leap year");
+        if (year % 4 == 0)
+            System.out.println("This year is a leap year");
+        else
+            System.out.println("This year is not a leap year");
     }
 }
 
-class voting
-{
-    public static void main(String args[])
-    {
+class voting {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int age;
         System.out.println("Enter your age");
         age = in.nextInt();
         String vote;
-        vote = (age>=18)?"Eligible":"Not eligible";
+        vote = (age >= 18) ? "Eligible" : "Not eligible";
         System.out.println(vote);
     }
 }
 
-class calculator //asks user to input two numbers and what operation to perform
+class calculator // asks user to input two numbers and what operation to perform
 {
-    public static void main(String args[])
-    {
-      Scanner in = new Scanner(System.in);
-      double num1;
-      double num2;
-      System.out.println("Enter two numbers");
-      num1 = in.nextDouble();
-      num2 = in.nextDouble();
-      int operator;
-      System.out.println("Enter +, -, *, / as per your convenience");
-      operator = in.next().charAt(0);   
-      switch(operator)
-      {
-        case '+':
-        System.out.println("Sum of the numbers are");
-        System.out.println(num1 +num2);
-        break;
-        case '-':
-        System.out.println("Difference of numbers are");
-        System.out.println(num1 - num2);
-        break;
-        case '*':
-        System.out.println("Multiplication of numbers are");
-        System.out.println(num1*num2);
-        break;
-        case '/':
-        System.out.println("Quotient of numbers are");
-        System.out.println(num1/num2);
-        break;
-        default:
-        System.out.println("Invalid input");
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        double num1;
+        double num2;
+        System.out.println("Enter two numbers");
+        num1 = in.nextDouble();
+        num2 = in.nextDouble();
+        int operator;
+        System.out.println("Enter +, -, *, / as per your convenience");
+        operator = in.next().charAt(0);
+        switch (operator) {
+            case '+':
+                System.out.println("Sum of the numbers are");
+                System.out.println(num1 + num2);
+                break;
+            case '-':
+                System.out.println("Difference of numbers are");
+                System.out.println(num1 - num2);
+                break;
+            case '*':
+                System.out.println("Multiplication of numbers are");
+                System.out.println(num1 * num2);
+                break;
+            case '/':
+                System.out.println("Quotient of numbers are");
+                System.out.println(num1 / num2);
+                break;
+            default:
+                System.out.println("Invalid input");
 
-      }
+        }
     }
 }
-//the below program takes input of a letter and check if it is a vowel or not(can be capital or small)
-class vowels
- {
-    public static void main(String args[])
-    {
+
+// the below program takes input of a letter and check if it is a vowel or
+// not(can be capital or small)
+class vowels {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the letter");
         char letter;
         letter = in.next().charAt(0);
-        switch(letter){
+        switch (letter) {
             case 'a':
-            System.out.println("a is a vowel");
-            break;
+                System.out.println("a is a vowel");
+                break;
             case 'A':
-            System.out.println("A is a vowel");
-            break;
+                System.out.println("A is a vowel");
+                break;
             case 'e':
-            System.out.println("e is a vowel");
-            break;
+                System.out.println("e is a vowel");
+                break;
             case 'E':
-            System.out.println("E is a vowel");
-            break;
+                System.out.println("E is a vowel");
+                break;
             case 'i':
-            System.out.println("i is a vowel");
-            break;
+                System.out.println("i is a vowel");
+                break;
             case 'I':
-            System.out.println("I is a vowel");
-            break;
+                System.out.println("I is a vowel");
+                break;
             case 'o':
-            System.out.println("o is a vowel");
-            break;
+                System.out.println("o is a vowel");
+                break;
             case 'O':
-            System.out.println("O is a vowel");
-            break;
+                System.out.println("O is a vowel");
+                break;
             case 'u':
-            System.out.println("u is a vowel");
-            break;
+                System.out.println("u is a vowel");
+                break;
             case 'U':
-            System.out.println("U is a vowel");
-            break;
+                System.out.println("U is a vowel");
+                break;
             default:
-            System.out.println("It is a constant");
+                System.out.println("It is a constant");
         }
     }
- }
+}
 
- class passing_division
- {
-    public static void main(String args[])
-    {
+class passing_division {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         double ss;
         double sci;
@@ -148,220 +141,212 @@ class vowels
         System.out.println("Enter your marks from Hindi");
         hindi = in.nextDouble();
         double sumpercent;
-        sumpercent =ss+sci+hindi+comp+maths;
+        sumpercent = ss + sci + hindi + comp + maths;
         double percent;
-        percent = (sumpercent/(80.0*5.0))*100.0;
-        System.out.println("You have attained "+percent+"%");
-       String result;
-       result =(percent>=33)?"You have passed":"You have failed";
-       System.out.println(result);    
+        percent = (sumpercent / (80.0 * 5.0)) * 100.0;
+        System.out.println("You have attained " + percent + "%");
+        String result;
+        result = (percent >= 33) ? "You have passed" : "You have failed";
+        System.out.println(result);
     }
 }
 
-class seconds_calculator
-{
-    public static void main(String args[])
-    {
+class seconds_calculator {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int inpsecs;
         System.out.println("Enter the seconds");
         inpsecs = in.nextInt();
-        //since we know that 1 day = 86400 seconds; 1 hour = 3600 secs; 1 minute = 60 secs;
+        // since we know that 1 day = 86400 seconds; 1 hour = 3600 secs; 1 minute = 60
+        // secs;
         int day;
         int hour;
         int mins;
-        int a;  //creating a variable to help while calculating the minutes
+        int a; // creating a variable to help while calculating the minutes
         int secs;
-        day = inpsecs/86400;
-        hour = inpsecs/3600;
-        a = inpsecs/60;
-        mins = a%60;
-        secs = inpsecs%60;
-        System.out.print(day+" day(s) ");
-        System.out.print(hour+" hour(s) ");
-        System.out.print(mins+" minute(s) ");
-        System.out.print(secs+" second(s) ");
+        day = inpsecs / 86400;
+        hour = inpsecs / 3600;
+        a = inpsecs / 60;
+        mins = a % 60;
+        secs = inpsecs % 60;
+        System.out.print(day + " day(s) ");
+        System.out.print(hour + " hour(s) ");
+        System.out.print(mins + " minute(s) ");
+        System.out.print(secs + " second(s) ");
     }
 }
 
-class loops_prog1
-{
-    public static void main(String args[])
-    {
+class loops_prog1 {
+    public static void main(String args[]) {
         int a;
-        for(a=1;a<=10;a++)
-        {
+        for (a = 1; a <= 10; a++) {
             System.out.println("Happy New Year");
         }
     }
 }
 
-class loops_prog2
-{
-    public static void main(String args[])
-    {
+class loops_prog2 {
+    public static void main(String args[]) {
         int a;
-        for(a=1;a<=10;a++)
-        {
-            System.out.println("Natural numbers from 1 to 10 are "+a);
+        for (a = 1; a <= 10; a++) {
+            System.out.println("Natural numbers from 1 to 10 are " + a);
         }
     }
 }
 
-class loops_prog3
-{
-    public static void main(String args[])
-    {
+class loops_prog3 {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        
+
     }
 }
 
-//this program calculates the area widely used polygons(triangles and quadrilaterals)
-class area_calculator
-{
-    public static void main(String args[])
-{
-    Scanner in = new Scanner(System.in);
-    int choice;
-    double area;
-    double length;
-    double breadth;
-    double base;
-    double height;
-    double side;
-    double a;
-    double b;
-    double c;
-    double s;
-    double d1;
-    double d2;
-    double pi = 22.0/7.0;
-    double r;
-    System.out.println("1 - Area of right angle triangle");
-    System.out.println("2 - Area of equilateral triangle");
-    System.out.println("3 - Area of isosceles triangle");
-    System.out.println("4 - Area of scalene triangle");
-    System.out.println("5 - Area of parallelogram");
-    System.out.println("6 - Area of rhombus");
-    System.out.println("7 - Area of rectangle");
-    System.out.println("8 - Area of square");
-    System.out.println("9 - Area of trapezium");
-    System.out.println("10 - Area of circle");
-    
-    System.out.println("--------------------------------------------");
-    System.out.println("Select your choice");
-    choice = in.nextInt();
-    System.out.println("--------------------------------------------");
-    switch(choice)
-    {
-        //1.Right angle triangle
-        case 1:
-        System.out.println("You chose area of right angle triangle");
-        System.out.println("Enter the base of the triangle in cm");
-        base = in.nextDouble();
-        System.out.println("Enter the height of the triangle in cm");
-        height = in.nextDouble();
-        area = (1.0/2.0)*base*height;
-        System.out.println("The area of the right angle triangle is "+area+"cm2");
-        break;
-        //2.Equilateral triangle
-        case 2:
-        System.out.println("You chose area of equilateral triangle");
-        System.out.println("Enter the side of the equilateral triangle in cm");
-        side = in.nextDouble();
-        area = (Math.sqrt(3)/4.0)*(side*side);
-        System.out.println("The area of the equilateral triangle is "+area+"cm2");
-        break;
-        //3.Isosceles triangle
-        case 3:
-        System.out.println("You chose area of isosceles triangle");
-        System.out.println("Enter side'a' in cm");
-        a = in.nextDouble();
-        System.out.println("Enter side'b' in cm");
-        b = in.nextDouble();
-        area = ((1.0/4.0)*b)*(Math.sqrt((4*a*a)-(b*b)));
-        System.out.println("The area of the isosceles triangle is "+area+"cm2");
-        break;
-        //4.Scalene triangle
-        case 4:
-        System.out.println("You chose area of scalene triangle");
-        System.out.println("Enter the three sides of the scalene triangle in cm");
-        a = in.nextDouble();
-        b = in.nextDouble();
-        c = in.nextDouble();
-        s = (a+b+c)/2.0;
-        area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-        System.out.println("The area of the scalene triangle is "+area+"cm2");
-        break;
-        //5.Parallelogram
-        case 5:
-        System.out.println("You chose area of parallelogram");
-        System.out.println("Enter the height of the parallelogram in cm");
-        height = in.nextDouble();
-        System.out.println("Enter the base of the parallelogram in cm");
-        base = in.nextDouble();
-        area = height*base;
-        System.out.println("The area of the parallelogram is "+area+"cm2");
-        break;
-        //6.Rhombus
-        case 6:
-        System.out.println("You chose area of rhombus");
-        System.out.println("Enter the first diagonal in cm");
-        d1 = in.nextDouble();
-        System.out.println("Enter the second diagonal in cm");
-        d2 = in.nextDouble();
-        area = ((1.0/2.0)*d1*d2);
-        System.out.println("The area of the rhombus is "+area+"cm2");
-        break;
-        case 7:
-        System.out.println("You chose area of rectangle");
-        System.out.println("Enter the length of the rectangle");
-        length = in.nextDouble();
-        System.out.println("Enter the breadth of the rectangle");
-        breadth = in.nextDouble();
-        area = length*breadth;
-        System.out.println("The area of the rectangle"+area+"cm2");
-        break;
-        case 8:
-        System.out.println("You chose the area of square");
-        System.out.println("Enter the side of the square in cm");
-        side = in.nextDouble();
-        area = Math.pow(side,2);
-        System.out.println("The area of the square is "+area+"cm2");
-        break;
-        case 9:
-        System.out.println("You chose area of trapezium ");
-        System.out.println("Enter side 1 in cm");
-        a = in.nextDouble();
-        System.out.println("Enter side 2 in cm");
-        b = in.nextDouble();
-        System.out.println("Enter the height in cm");
-        height = in.nextDouble();
-        area = (1.0/2.0)*(a+b)*height;
-        System.out.println("The area of the trapezium is "+area+"cm2");
-        break;
-        case 10:
-        System.out.println("You chose area of circle");
-        System.out.println("Enter the radius of the circle in cm");
-        r = in.nextDouble();
-        area = pi*(r*r);
-        System.out.println("The area of the circle is "+area+"");
-        break;
-        default:
-        System.out.println("Invalid Input");
-    }    
+// this program calculates the area widely used polygons(triangles and
+// quadrilaterals)
+class area_calculator {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int choice;
+        double area;
+        double length;
+        double breadth;
+        double base;
+        double height;
+        double side;
+        double a;
+        double b;
+        double c;
+        double s;
+        double d1;
+        double d2;
+        double pi = 22.0 / 7.0;
+        double r;
+        System.out.println("1 - Area of right angle triangle");
+        System.out.println("2 - Area of equilateral triangle");
+        System.out.println("3 - Area of isosceles triangle");
+        System.out.println("4 - Area of scalene triangle");
+        System.out.println("5 - Area of parallelogram");
+        System.out.println("6 - Area of rhombus");
+        System.out.println("7 - Area of rectangle");
+        System.out.println("8 - Area of square");
+        System.out.println("9 - Area of trapezium");
+        System.out.println("10 - Area of circle");
+
+        System.out.println("--------------------------------------------");
+        System.out.println("Select your choice");
+        choice = in.nextInt();
+        System.out.println("--------------------------------------------");
+        switch (choice) {
+            // 1.Right angle triangle
+            case 1:
+                System.out.println("You chose area of right angle triangle");
+                System.out.println("Enter the base of the triangle in cm");
+                base = in.nextDouble();
+                System.out.println("Enter the height of the triangle in cm");
+                height = in.nextDouble();
+                area = (1.0 / 2.0) * base * height;
+                System.out.println("The area of the right angle triangle is " + area + "cm2");
+                break;
+            // 2.Equilateral triangle
+            case 2:
+                System.out.println("You chose area of equilateral triangle");
+                System.out.println("Enter the side of the equilateral triangle in cm");
+                side = in.nextDouble();
+                area = (Math.sqrt(3) / 4.0) * (side * side);
+                System.out.println("The area of the equilateral triangle is " + area + "cm2");
+                break;
+            // 3.Isosceles triangle
+            case 3:
+                System.out.println("You chose area of isosceles triangle");
+                System.out.println("Enter side'a' in cm");
+                a = in.nextDouble();
+                System.out.println("Enter side'b' in cm");
+                b = in.nextDouble();
+                area = ((1.0 / 4.0) * b) * (Math.sqrt((4 * a * a) - (b * b)));
+                System.out.println("The area of the isosceles triangle is " + area + "cm2");
+                break;
+            // 4.Scalene triangle
+            case 4:
+                System.out.println("You chose area of scalene triangle");
+                System.out.println("Enter the three sides of the scalene triangle in cm");
+                a = in.nextDouble();
+                b = in.nextDouble();
+                c = in.nextDouble();
+                s = (a + b + c) / 2.0;
+                area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+                System.out.println("The area of the scalene triangle is " + area + "cm2");
+                break;
+            // 5.Parallelogram
+            case 5:
+                System.out.println("You chose area of parallelogram");
+                System.out.println("Enter the height of the parallelogram in cm");
+                height = in.nextDouble();
+                System.out.println("Enter the base of the parallelogram in cm");
+                base = in.nextDouble();
+                area = height * base;
+                System.out.println("The area of the parallelogram is " + area + "cm2");
+                break;
+            // 6.Rhombus
+            case 6:
+                System.out.println("You chose area of rhombus");
+                System.out.println("Enter the first diagonal in cm");
+                d1 = in.nextDouble();
+                System.out.println("Enter the second diagonal in cm");
+                d2 = in.nextDouble();
+                area = ((1.0 / 2.0) * d1 * d2);
+                System.out.println("The area of the rhombus is " + area + "cm2");
+                break;
+            case 7:
+                System.out.println("You chose area of rectangle");
+                System.out.println("Enter the length of the rectangle");
+                length = in.nextDouble();
+                System.out.println("Enter the breadth of the rectangle");
+                breadth = in.nextDouble();
+                area = length * breadth;
+                System.out.println("The area of the rectangle" + area + "cm2");
+                break;
+            case 8:
+                System.out.println("You chose the area of square");
+                System.out.println("Enter the side of the square in cm");
+                side = in.nextDouble();
+                area = Math.pow(side, 2);
+                System.out.println("The area of the square is " + area + "cm2");
+                break;
+            case 9:
+                System.out.println("You chose area of trapezium ");
+                System.out.println("Enter side 1 in cm");
+                a = in.nextDouble();
+                System.out.println("Enter side 2 in cm");
+                b = in.nextDouble();
+                System.out.println("Enter the height in cm");
+                height = in.nextDouble();
+                area = (1.0 / 2.0) * (a + b) * height;
+                System.out.println("The area of the trapezium is " + area + "cm2");
+                break;
+            case 10:
+                System.out.println("You chose area of circle");
+                System.out.println("Enter the radius of the circle in cm");
+                r = in.nextDouble();
+                area = pi * (r * r);
+                System.out.println("The area of the circle is " + area + "");
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
 }
-}       
 
-/**Unsolved Java Programming - Q.1 - Write a program to input three angles of a triangle and check whether a triangle is possible or not. If possible then check whether it is an acute-angled triangle, right-angled or an obtuse-angled triangle otherwise, display 'Triangle not possible'.
-Sample Input: Enter three angles: 40, 50, 90
-Sample Output: Right=angled Triangle*/
+/**
+ * Unsolved Java Programming - Q.1 - Write a program to input three angles of a
+ * triangle and check whether a triangle is possible or not. If possible then
+ * check whether it is an acute-angled triangle, right-angled or an
+ * obtuse-angled triangle otherwise, display 'Triangle not possible'.
+ * Sample Input: Enter three angles: 40, 50, 90
+ * Sample Output: Right=angled Triangle
+ */
 
-class angles_of_triangle
-{
-    public static void main(String args[])
-    {
+class angles_of_triangle {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         double a;
         double b;
@@ -370,38 +355,33 @@ class angles_of_triangle
         a = in.nextDouble();
         b = in.nextDouble();
         c = in.nextDouble();
-        if(a+b+c == 180)
-        {
-            if(a<90 && b<90 && c<90)
-            {
+        if (a + b + c == 180) {
+            if (a < 90 && b < 90 && c < 90) {
                 System.out.println("It is an Acute Triangle");
-            }
-            else if(a==90 || b==90 || c==90)
-            {
+            } else if (a == 90 || b == 90 || c == 90) {
                 System.out.println("It is a Right Angle Triangle");
-            }
-            else if(a+b>90 || b+c>90 || a+c>90)
-            {
+            } else if (a + b > 90 || b + c > 90 || a + c > 90) {
                 System.out.println("It is an Obtuse Triangle");
             }
-        }
-        else
-        {
+        } else {
             System.out.println("Triangle not possible");
         }
     }
 }
 
-/** Unsolved Java Programming - Q.3 - Write a program to input three numbers and check whether they are equal or not. If they are unequal numbers then display the greatest among them otherwise, display the message 'All the numbers are equal'.
-Sample Input: 34, 87, 61
-Sample Output: Greatest number: 87
-Sample Input: 81, 81, 81
-Sample Output: All the numbers are equal. */
+/**
+ * Unsolved Java Programming - Q.3 - Write a program to input three numbers and
+ * check whether they are equal or not. If they are unequal numbers then display
+ * the greatest among them otherwise, display the message 'All the numbers are
+ * equal'.
+ * Sample Input: 34, 87, 61
+ * Sample Output: Greatest number: 87
+ * Sample Input: 81, 81, 81
+ * Sample Output: All the numbers are equal.
+ */
 
-class chp7_unsolved_q3
-{
-    public static void main(String args[])
-    {
+class chp7_unsolved_q3 {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int a;
         int b;
@@ -410,87 +390,54 @@ class chp7_unsolved_q3
         a = in.nextInt();
         b = in.nextInt();
         c = in.nextInt();
-        if(a!=b && b!=c && a!=c)
-        {
-        if(a>b && a>c)
-        {
-            System.out.println("Greatest number: "+a);
-        }
-        else if(b>c && b>a)
-        {
-            System.out.println("Greatest number: "+b);
-        }
-        else if(c>a && c>b)
-        {
-            System.out.println("Greatest Number: "+c);
-        }
-        
-        }
-        else
-        {
+        if (a != b && b != c && a != c) {
+            if (a > b && a > c) {
+                System.out.println("Greatest number: " + a);
+            } else if (b > c && b > a) {
+                System.out.println("Greatest number: " + b);
+            } else if (c > a && c > b) {
+                System.out.println("Greatest Number: " + c);
+            }
+
+        } else {
             System.out.println("All the numbers are equal");
         }
     }
 }
 
-/** Unsolved Java Programming - Q.3 - Write a program to input year and check whether it is:
-(a) a Leap year (b) a Century Leap year (c) a Century year but not a Leap year
-Sample Input: 2000
-Sample Output: It is a Century Leap Year.  */
-class leapyear
-{
-    public static void main(String args[])
-    {
+/**
+ * Unsolved Java Programming - Q.3 - Write a program to input year and check
+ * whether it is:
+ * (a) a Leap year (b) a Century Leap year (c) a Century year but not a Leap
+ * year
+ * Sample Input: 2000
+ * Sample Output: It is a Century Leap Year.
+ */
+class leapyear {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int year;
         System.out.println("Enter the year");
         year = in.nextInt();
-        if(year%4==0 && year%400==0)
-        {
-            if(year%4==0)
-            {
+        if (year % 4 == 0 && year % 400 == 0) {
+            if (year % 4 == 0) {
                 System.out.println("It is a leap year");
+            } else if (year % 400 == 0) {
+                System.out.println("It is a century leap year");
             }
-            else if(year%400==0)
-            {
-                System.out.println("It is a century leap year");   
-            }
-    
-        }
-        else
-        {
+
+        } else {
             System.out.println("None");
         }
     }
 }
 
-class oddnumbers_1to100
-{
-    public static void main(String args[])
-    {
+class oddnumbers_1to100 {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int i = 1;
-        while(i<=100)
-        {
-            if(i%2!=0)
-            {
-                System.out.println(i);
-            }
-            i++;
-
-        }
-    }
-}
-class evennumbers_1to100
-{
-    public static void main(String args[])
-    {
-        Scanner in = new Scanner(System.in);
-        int i = 1;
-        while(i<=100)
-        {
-            if(i%2==0)
-            {
+        while (i <= 100) {
+            if (i % 2 != 0) {
                 System.out.println(i);
             }
             i++;
@@ -499,332 +446,334 @@ class evennumbers_1to100
     }
 }
 
-public class standardangles
-{
-public static void main(String args[])
-{
-Scanner in = new Scanner(System.in);
-int ch,angle;
-double a, o, h, sin0, sin30, sin45, sin60, sin90, cos0, cos30, cos45, cos60, cos90, tan0, tan30, tan45, tan60,cosec30, cosec45, cosec60, cosec90,cot30, cot45, cot60, cot90, sec0, sec30, sec45, sec60;
-String tan90,cot0, sec90, cosec0;
-System.out.println("Enter 1,2,3,4,5,6 for sin, cos, tan, cosec, sec, cot respectively");
-ch = in.nextInt();
-switch(ch)
-{
-case 1:
-System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
-angle = in.nextInt();
-switch(angle)
-{
-case 0:
-System.out.println("Enter opposite");
-o = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-sin0 = 0*(o/h);
-System.out.println("The value for sin0 is "+sin0);
-break;
-case 30:
-System.out.println("Enter opposite");
-o = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-sin30 = (1/2)*(o/h);
-System.out.println("The value for sin30 is "+sin30);
-break;
-case 45:
-System.out.println("Enter opposite");
-o = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-sin45 = (1/Math.sqrt(2))*(o/h);
-System.out.println("The value for sin45 is "+sin45);
-break;
-case 60:
-System.out.println("Enter opposite");
-o = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-sin60 = ((Math.sqrt(3))/2)*(o/h);
-System.out.println("The value for sin60 is "+sin60);
-break;
-case 90:
-System.out.println("Enter opposite");
-o = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-sin90 = 1*(o/h);
-System.out.println("The value for sin90 is "+sin90);
-break;
-default:
-System.out.println("Invalid Input");
-}
-case 2:
-System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
-angle = in.nextInt();
-switch(angle)
-{
-case 0:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-cos0 = 1*(a/h);
-System.out.println("The value for cos0 is "+cos0);
-break;
-case 30:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-cos30 = ((Math.sqrt(3))/2)*(a/h);
-System.out.println("The value for cos30 is "+cos30);
-break;
-case 45:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-cos45 = (1/Math.sqrt(2))*(a/h);
-System.out.println("The value for cos45 is "+cos45);
-break;
-case 60:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-cos60 = (1/2)*(a/h);
-System.out.println("The value for cos60 is "+cos60);
-break;
-case 90:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-cos90 = 0*(a/h);
-System.out.println("The value for cos90 is "+cos90);
-break;
-default:
-System.out.println("Invalid Input");
-}
-case 3:
-System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
-angle = in.nextInt();
-switch(angle)
-{
-case 0:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter opposite");
-o = in.nextDouble();
-tan0 = 0*(o/a);
-System.out.println("The value for tan0 is "+tan0);
-break;
-case 30:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter opposite");
-o = in.nextDouble();
-tan30 = (1/(Math.sqrt(3)))*(o/a);
-System.out.println("The value for tan30 is "+tan30);
-break;
-case 45:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter opposite");
-o = in.nextDouble();
-tan45 = 1*(o/a);
-System.out.println("The value for tan45 is "+tan45);
-break;
-case 60:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter opposite");
-o = in.nextDouble();
-tan60 = Math.sqrt(3)*(o/a);
-System.out.println("The value for tan60 is "+tan60);
-break;
-case 90:
-System.out.println("Enter adjacent");
-a = in.nextDouble();
-System.out.println("Enter hypotenuse");
-h = in.nextDouble();
-tan90 = "not defined(infinity)";
-System.out.println("The value for tan90 is "+tan90);
-break;
+class evennumbers_1to100 {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+            i++;
 
-default:
-System.out.println("Invalid Input");
+        }
+    }
 }
-case 4:
-System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
-angle = in.nextInt();
-switch(angle)
-{
-    case 0:
-    System.out.println("Enter value for hypotenuse");
-    h = in.nextDouble();
-    System.out.println("Enter value for opposite side");
-    o = in.nextDouble();
-    cosec0 = "not defined(infinity)";
-    System.out.println("The value for cosec0 is "+cosec0);
-    break;
-    case 30:
-    System.out.println("Enter value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cosec30 = 2*(h/o);
-System.out.println("The value for cosec30 is "+cosec30);
-break;
-case 45:
-System.out.println("Enter value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cosec45 = Math.sqrt(2)*(h/o);
-System.out.println("The value for cosec45 is "+cosec45);
-break;
-case 60:
-System.out.println("Enter value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cosec60 = ((2)/(Math.sqrt(3)))*(h/o);
-System.out.println("The value for cosec60 is "+cosec60);
-break;
-case 90:
-System.out.println("Enter value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cosec90 = 1*(h/o);
-System.out.println("The value for cosec90 is "+cosec90);
-break;
-default:
-System.out.println("Invalid Input");
+
+class standardangles {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int ch, angle;
+        double a, o, h, sin0, sin30, sin45, sin60, sin90, cos0, cos30, cos45, cos60, cos90, tan0, tan30, tan45, tan60,
+                cosec30, cosec45, cosec60, cosec90, cot30, cot45, cot60, cot90, sec0, sec30, sec45, sec60;
+        String tan90, cot0, sec90, cosec0;
+        System.out.println("Enter 1,2,3,4,5,6 for sin, cos, tan, cosec, sec, cot respectively");
+        ch = in.nextInt();
+        switch (ch) {
+            case 1:
+                System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
+                angle = in.nextInt();
+                switch (angle) {
+                    case 0:
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        sin0 = 0 * (o / h);
+                        System.out.println("The value for sin0 is " + sin0);
+                        break;
+                    case 30:
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        sin30 = (1 / 2) * (o / h);
+                        System.out.println("The value for sin30 is " + sin30);
+                        break;
+                    case 45:
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        sin45 = (1 / Math.sqrt(2)) * (o / h);
+                        System.out.println("The value for sin45 is " + sin45);
+                        break;
+                    case 60:
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        sin60 = ((Math.sqrt(3)) / 2) * (o / h);
+                        System.out.println("The value for sin60 is " + sin60);
+                        break;
+                    case 90:
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        sin90 = 1 * (o / h);
+                        System.out.println("The value for sin90 is " + sin90);
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                }
+            case 2:
+                System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
+                angle = in.nextInt();
+                switch (angle) {
+                    case 0:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        cos0 = 1 * (a / h);
+                        System.out.println("The value for cos0 is " + cos0);
+                        break;
+                    case 30:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        cos30 = ((Math.sqrt(3)) / 2) * (a / h);
+                        System.out.println("The value for cos30 is " + cos30);
+                        break;
+                    case 45:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        cos45 = (1 / Math.sqrt(2)) * (a / h);
+                        System.out.println("The value for cos45 is " + cos45);
+                        break;
+                    case 60:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        cos60 = (1 / 2) * (a / h);
+                        System.out.println("The value for cos60 is " + cos60);
+                        break;
+                    case 90:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        cos90 = 0 * (a / h);
+                        System.out.println("The value for cos90 is " + cos90);
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                }
+            case 3:
+                System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
+                angle = in.nextInt();
+                switch (angle) {
+                    case 0:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        tan0 = 0 * (o / a);
+                        System.out.println("The value for tan0 is " + tan0);
+                        break;
+                    case 30:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        tan30 = (1 / (Math.sqrt(3))) * (o / a);
+                        System.out.println("The value for tan30 is " + tan30);
+                        break;
+                    case 45:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        tan45 = 1 * (o / a);
+                        System.out.println("The value for tan45 is " + tan45);
+                        break;
+                    case 60:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter opposite");
+                        o = in.nextDouble();
+                        tan60 = Math.sqrt(3) * (o / a);
+                        System.out.println("The value for tan60 is " + tan60);
+                        break;
+                    case 90:
+                        System.out.println("Enter adjacent");
+                        a = in.nextDouble();
+                        System.out.println("Enter hypotenuse");
+                        h = in.nextDouble();
+                        tan90 = "not defined(infinity)";
+                        System.out.println("The value for tan90 is " + tan90);
+                        break;
+
+                    default:
+                        System.out.println("Invalid Input");
+                }
+            case 4:
+                System.out.println("Enter '0' '30' '45 '60 '90' as per your convinince");
+                angle = in.nextInt();
+                switch (angle) {
+                    case 0:
+                        System.out.println("Enter value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cosec0 = "not defined(infinity)";
+                        System.out.println("The value for cosec0 is " + cosec0);
+                        break;
+                    case 30:
+                        System.out.println("Enter value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cosec30 = 2 * (h / o);
+                        System.out.println("The value for cosec30 is " + cosec30);
+                        break;
+                    case 45:
+                        System.out.println("Enter value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cosec45 = Math.sqrt(2) * (h / o);
+                        System.out.println("The value for cosec45 is " + cosec45);
+                        break;
+                    case 60:
+                        System.out.println("Enter value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cosec60 = ((2) / (Math.sqrt(3))) * (h / o);
+                        System.out.println("The value for cosec60 is " + cosec60);
+                        break;
+                    case 90:
+                        System.out.println("Enter value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cosec90 = 1 * (h / o);
+                        System.out.println("The value for cosec90 is " + cosec90);
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                }
+            case 5:
+                System.out.println("Chose between '0', '30', '45', '60', '90' as per your convinience");
+                angle = in.nextInt();
+                switch (angle) {
+                    case 0:
+                        System.out.println("Enter the value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter the value for adjacent side");
+                        a = in.nextDouble();
+                        sec0 = 1 * (h / a);
+                        System.out.println("The value for sec0 is " + sec0);
+                        break;
+                    case 30:
+                        System.out.println("Enter the value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter the value for adjacent side");
+                        a = in.nextDouble();
+                        sec30 = ((2) / (Math.sqrt(3))) * (h / a);
+                        System.out.println("The value for sec30 is " + sec30);
+                        break;
+                    case 45:
+                        System.out.println("Enter the value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter the value for adjacent side");
+                        a = in.nextDouble();
+                        sec45 = (Math.sqrt(2)) * (h / a);
+                        System.out.println("The value for sec45 is " + sec45);
+                        break;
+                    case 60:
+                        System.out.println("Enter the value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter the value for adjacent side");
+                        a = in.nextDouble();
+                        sec60 = 2 * (h / a);
+                        System.out.println("The value for sec60 is " + sec60);
+                        break;
+                    case 90:
+                        System.out.println("Enter the value for hypotenuse");
+                        h = in.nextDouble();
+                        System.out.println("Enter the value for adjacent side");
+                        a = in.nextDouble();
+                        sec90 = "not defined(infinity)";
+                        System.out.println("The value for sec90 is " + sec90);
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                }
+            case 6:
+                System.out.println("Chose between '0', '30', '45', '60', '90' as per your convinience");
+                angle = in.nextInt();
+                switch (angle) {
+                    case 0:
+                        System.out.println("Enter value for adjacent side");
+                        a = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cot0 = "not defined(infinity)";
+                        System.out.println("The value for cot0 is " + cot0);
+                        break;
+                    case 30:
+                        System.out.println("Enter value for adjacent side");
+                        a = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cot30 = (Math.sqrt(3)) * (a / o);
+                        System.out.println("The value for cot30 is " + cot30);
+                        break;
+                    case 45:
+                        System.out.println("Enter value for adjacent side");
+                        a = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cot45 = 1 * (a / o);
+                        System.out.println("The value for cot45 is " + cot45);
+                        break;
+                    case 60:
+                        System.out.println("Enter value for adjacent side");
+                        a = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cot60 = ((1) / (Math.sqrt(3))) * (a / o);
+                        System.out.println("The value for cot60 is " + cot60);
+                        break;
+                    case 90:
+                        System.out.println("Enter value for adjacent side");
+                        a = in.nextDouble();
+                        System.out.println("Enter value for opposite side");
+                        o = in.nextDouble();
+                        cot90 = 0 * (a / o);
+                        System.out.println("The value for cot90 is " + cot90);
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                }
+        }
+    }
 }
-case 5:
-System.out.println("Chose between '0', '30', '45', '60', '90' as per your convinience");
-angle = in.nextInt();
-switch(angle)
-{
-    case 0:
-    System.out.println("Enter the value for hypotenuse");
-    h = in.nextDouble();
-    System.out.println("Enter the value for adjacent side");
-    a = in.nextDouble();
-    sec0 = 1*(h/a);
-    System.out.println("The value for sec0 is "+sec0);
-    break;
-    case 30:
-System.out.println("Enter the value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter the value for adjacent side");
-a = in.nextDouble();
-sec30 = ((2)/(Math.sqrt(3)))*(h/a);
-System.out.println("The value for sec30 is "+sec30);
-break;
-case 45:
-System.out.println("Enter the value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter the value for adjacent side");
-a = in.nextDouble();
-sec45 = (Math.sqrt(2))*(h/a);
-System.out.println("The value for sec45 is "+sec45);
-break;
-case 60:
-System.out.println("Enter the value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter the value for adjacent side");
-a = in.nextDouble();
-sec60 = 2*(h/a);
-System.out.println("The value for sec60 is "+sec60);
-break;
-case 90:
-System.out.println("Enter the value for hypotenuse");
-h = in.nextDouble();
-System.out.println("Enter the value for adjacent side");
-a = in.nextDouble();
-sec90 = "not defined(infinity)";
-System.out.println("The value for sec90 is "+sec90);
-break;
-default:
-System.out.println("Invalid Input");
-}
-case 6:
-System.out.println("Chose between '0', '30', '45', '60', '90' as per your convinience");
-angle = in.nextInt();
-switch(angle)
-{
-    case 0:
-    System.out.println("Enter value for adjacent side");
-    a = in.nextDouble();
-    System.out.println("Enter value for opposite side");
-    o = in.nextDouble();
-    cot0 = "not defined(infinity)";
-    System.out.println("The value for cot0 is "+cot0);
-    break;
-    case 30:
-System.out.println("Enter value for adjacent side");
-a = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cot30 = (Math.sqrt(3))*(a/o);
-System.out.println("The value for cot30 is "+cot30);
-break;
-case 45:
-System.out.println("Enter value for adjacent side");
-a = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cot45 = 1*(a/o);
-System.out.println("The value for cot45 is "+cot45);
-break;
-case 60:
-System.out.println("Enter value for adjacent side");
-a = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cot60 = ((1)/(Math.sqrt(3)))*(a/o);
-System.out.println("The value for cot60 is "+cot60);
-break;
-case 90:
-System.out.println("Enter value for adjacent side");
-a = in.nextDouble();
-System.out.println("Enter value for opposite side");
-o = in.nextDouble();
-cot90 = 0*(a/o);
-System.out.println("The value for cot90 is "+cot90);
-break;
-default:
-System.out.println("Invalid Input");
-}
-}
-}
-}
-class Integers
-{
-    public static void main(String args[]) 
-    {
+
+class Integers {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int pSum = 0, pCount = 0, nSum = 0, nCount = 0;
         System.out.println("Enter 50 numbers");
-        
+
         for (int i = 1; i <= 50; i++) {
             int n = in.nextInt();
-            if (n >= 0) 
-            {
+            if (n >= 0) {
                 pSum += n;
                 pCount++;
-            }
-            else 
-            {
+            } else {
                 nSum += n;
                 nCount++;
             }
         }
-        
+
         System.out.println("Positive Count = " + pCount);
         System.out.println("Positive Sum = " + pSum);
         System.out.println("Negative Count = " + nCount);
@@ -832,168 +781,146 @@ class Integers
     }
 }
 
- class tables
- {
-    public static void main(String args[])
-    {
+class tables {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int num;
         int product;
         int i;
         System.out.println("Enter a number");
         num = in.nextInt();
-        System.out.println("Tables of "+num);
-        for(i=1;i<=30;i++)
-        {
-            product=i*num;
-            System.out.println(+num+" x "+i+" = "+product);
+        System.out.println("Tables of " + num);
+        for (i = 1; i <= 30; i++) {
+            product = i * num;
+            System.out.println(+num + " x " + i + " = " + product);
         }
     }
- }
+}
 
-class Calculator
-{
-    public static double add(double num1,double num2)
-    {
+class Calculator {
+    public static double add(double num1, double num2) {
         double sum;
-        sum = num1+num2;
+        sum = num1 + num2;
         return sum;
     }
-    public static double subtract(double num1,double num2)
-    {
+
+    public static double subtract(double num1, double num2) {
         double diff;
-        diff = num1-num2;
+        diff = num1 - num2;
         return diff;
     }
-    public static double multiply(double num1,double num2)
-{
-    double multi;
-    multi = num1*num2;
-    return multi;
-}
-public static double divide(double num1,double num2)
-{
-    double div;
-    div = num1/num2;
-    return div;
-}
-public static void main(String args[])
-{
-    Scanner in = new Scanner(System.in);
-    System.out.println("Enter the first number");
-    double num1 = in.nextDouble();
-    System.out.println("Enter the second number");
-    double num2 = in.nextDouble();
-    System.out.println("Enter 1,2,3,4 for addition, subtraction, multiplication and division respectively");
-    int choice = in.nextInt();
-    double a,b,c,d;
-    switch(choice)
-    {
-        case 1:
-        a=Calculator.add(num1,num2);
-        System.out.println(a);
-        break;
-        case 2:
-        b=Calculator.subtract(num1, num2);
-        System.out.println(b);
-        break;
-        case 3:
-        c=Calculator.multiply(num1, num2);
-        System.out.println(c);
-        break;
-        case 4:
-        d=Calculator.divide(num1, num2);
-        System.out.println(d);
-        break;
 
+    public static double multiply(double num1, double num2) {
+        double multi;
+        multi = num1 * num2;
+        return multi;
     }
-}
-}
 
-class pattern 
-{
-    public static void main(String args[])
-    {
-        for(int i=1; i<=5; i++)   
-     { 
-        for(int j=1; j<=i; j++)
-        {
-            System.out.println(j);
-        } 
-    }  
-System.out.println();
+    public static double divide(double num1, double num2) {
+        double div;
+        div = num1 / num2;
+        return div;
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        double num1 = in.nextDouble();
+        System.out.println("Enter the second number");
+        double num2 = in.nextDouble();
+        System.out.println("Enter 1,2,3,4 for addition, subtraction, multiplication and division respectively");
+        int choice = in.nextInt();
+        double a, b, c, d;
+        switch (choice) {
+            case 1:
+                a = Calculator.add(num1, num2);
+                System.out.println(a);
+                break;
+            case 2:
+                b = Calculator.subtract(num1, num2);
+                System.out.println(b);
+                break;
+            case 3:
+                c = Calculator.multiply(num1, num2);
+                System.out.println(c);
+                break;
+            case 4:
+                d = Calculator.divide(num1, num2);
+                System.out.println(d);
+                break;
+
+        }
     }
 }
 
-class digit_extraction
-{
-    public static void main(String args[])
-    {
+class pattern {
+    public static void main(String args[]) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.println(j);
+            }
+        }
+        System.out.println();
+    }
+}
+
+class digit_extraction {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int num;
         int dig;
         System.out.println("Enter number");
         num = in.nextInt();
-        do
-        {
-            dig = num%10;
+        do {
+            dig = num % 10;
             System.out.println(dig);
-            num = num/10;
-        }
-        while(num>0);
+            num = num / 10;
+        } while (num > 0);
     }
 }
 
-class disarium
-  {
-    public static void main(String args[])
-    {
-      Scanner in = new Scanner(System.in);
-      int count=0,digit,num,store,sum=0;
-      int pow;
-      System.out.println("Enter number");
-      num = in.nextInt();
-      store = num;
-
-      do                  //this do while counts the digits
-        {
-          num = num/10;
-          count++;
-        }
-        while(num>0);
-        num = store;
-         do
-      {
-        digit = num%10;
-        pow = (int)Math.pow(digit,count);
-        sum = sum+pow;
-        count--;
-        num = num/10;
-      }
-      while(num>0);
-
-      if(store==sum)
-        System.out.println("It is a Disarium number");
-      else 
-        System.out.println("It is not a Dissarium number");
-    }
-}
-
-//this program creates a solid rectangle as per the amount of rows and columns the user wants
-class solid_rectangle
-{
-    public static void main(String args[])
-    {
+class disarium {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        int rows,columns;
+        int count = 0, digit, num, store, sum = 0;
+        int pow;
+        System.out.println("Enter number");
+        num = in.nextInt();
+        store = num;
+
+        do // this do while counts the digits
+        {
+            num = num / 10;
+            count++;
+        } while (num > 0);
+        num = store;
+        do {
+            digit = num % 10;
+            pow = (int) Math.pow(digit, count);
+            sum = sum + pow;
+            count--;
+            num = num / 10;
+        } while (num > 0);
+
+        if (store == sum)
+            System.out.println("It is a Disarium number");
+        else
+            System.out.println("It is not a Dissarium number");
+    }
+}
+
+// this program creates a solid rectangle as per the amount of rows and columns
+// the user wants
+class solid_rectangle {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int rows, columns;
         System.out.println("Enter number of rows");
         rows = in.nextInt();
         System.out.println("Enter number of columns");
         columns = in.nextInt();
-        for(int i = 1; i<=rows; i++)
-        {
-            for(int j = 1; j<=columns; j++)
-            {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -1002,19 +929,16 @@ class solid_rectangle
     }
 }
 
-//this program creates a right angled triangle with the amount of rows the user wants
-class right_angle_triangle
-{
-    public static void main(String args[])
-    {
+// this program creates a right angled triangle with the amount of rows the user
+// wants
+class right_angle_triangle {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int rows;
         System.out.println("Enter number of rows");
         rows = in.nextInt();
-        for(int i = 1; i<=rows; i++)
-        {
-            for(int j = 1; j<=i; j++)
-            {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -1022,19 +946,16 @@ class right_angle_triangle
     }
 }
 
-//this program creates an inverted right angled triangle with the amount of rows the user wants
-class inverted_right_angle_triangle
-{
-    public static void main(String args[])
-    {
+// this program creates an inverted right angled triangle with the amount of
+// rows the user wants
+class inverted_right_angle_triangle {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int rows;
         System.out.println("Enter number of rows");
         rows = in.nextInt();
-        for(int i=rows; i>=1; i--)
-        {
-            for(int j = 1; j<=i; j++)
-            {
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(" * ");
             }
             System.out.println();
@@ -1042,218 +963,180 @@ class inverted_right_angle_triangle
     }
 }
 
-class niven_harshad
-{
-    public static void main(String args[])
-    {
+class niven_harshad {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        int num,digit,sum=0,num1;
+        int num, digit, sum = 0, num1;
         System.out.println("Enter number");
         num = in.nextInt();
-        num1=num;
-        do
-        {
-            digit = num%10;
-            num=num/10;
-            sum=sum+digit;
-        }
-        while(num>0);
+        num1 = num;
+        do {
+            digit = num % 10;
+            num = num / 10;
+            sum = sum + digit;
+        } while (num > 0);
 
-        if(num1%sum==0)
-        {
+        if (num1 % sum == 0) {
             System.out.println("It is a Niven/Harshad Number");
-        }
-        else 
-        {
+        } else {
             System.out.println("It is not a Niven/Harshad Number");
         }
     }
 }
 
-class celcius_farenheit
-{
-    public static void main(String args[])
-    {
+class celcius_farenheit {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int ch;
-        double f,c;
+        double f, c;
         System.out.println("What would you like to input");
         System.out.println("1-Celsius");
         System.out.println("2-Farenheit");
         System.out.println("------------------------------------------------------------");
         System.out.println("Type the number with your choice");
         ch = in.nextInt();
-        switch(ch)
-        {
+        switch (ch) {
             case 1:
-            System.out.println("You chose Celsius -----> Farenheit");
-            System.out.println("Enter degree in celsius");
-            c = in.nextDouble();
-            f=(c)*(9.0/5.0)+(32.0);
-            System.out.println(c+"°c in farenheit is "+f+"°f");
-            break;
+                System.out.println("You chose Celsius -----> Farenheit");
+                System.out.println("Enter degree in celsius");
+                c = in.nextDouble();
+                f = (c) * (9.0 / 5.0) + (32.0);
+                System.out.println(c + "°c in farenheit is " + f + "°f");
+                break;
             case 2:
-            System.out.println("You chose Farenheit -----> Celsius");
-            System.out.println("Enter degree in farenheit");
-            f = in.nextDouble();
-            c=((f)-(32.0))*(5.0/9.0);
-            System.out.println(f+"°f in celsius is "+c+"°c");
-            break;
+                System.out.println("You chose Farenheit -----> Celsius");
+                System.out.println("Enter degree in farenheit");
+                f = in.nextDouble();
+                c = ((f) - (32.0)) * (5.0 / 9.0);
+                System.out.println(f + "°f in celsius is " + c + "°c");
+                break;
         }
     }
 }
 
 /*
- 1AAAAA
- 22BBBB
- 333CCC
- 4444DD
- 55555E
+ * 1AAAAA
+ * 22BBBB
+ * 333CCC
+ * 4444DD
+ * 55555E
  */
-class toughpattern
-{
-    public static void main(String args[])
-    {
-        int a,b,c,d,p,k;p=65;k=5;
+class toughpattern {
+    public static void main(String args[]) {
+        int a, b, c, d, p, k;
+        p = 65;
+        k = 5;
         System.out.println("The pattern:");
-        for(a=1;a<=5;a++)
-        {
-            for(b=1;b<=a;b++)
-            System.out.print(a+" ");
-            for(c=k;c>1;c--)
-            {
-                System.out.print((char)p+" ");
+        for (a = 1; a <= 5; a++) {
+            for (b = 1; b <= a; b++)
+                System.out.print(a + " ");
+            for (c = k; c > 1; c--) {
+                System.out.print((char) p + " ");
             }
-            k = k-1;
-            p=p+1;
+            k = k - 1;
+            p = p + 1;
             System.out.println();
         }
     }
 }
 
-class factorial
-{
-    public static void main(String args[])
-    {
+class factorial {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        int n,prod=1;
+        int n, prod = 1;
         System.out.println("Enter number");
         n = in.nextInt();
-        for(int i=1;i<=n;i++)
-        {
-            prod = prod*i;
+        for (int i = 1; i <= n; i++) {
+            prod = prod * i;
         }
-        System.out.println("Factorial of "+n+" = "+prod);
+        System.out.println("Factorial of " + n + " = " + prod);
     }
 }
 
-
-class model_question
-{
-    public static void main(String args[])
-    {
+class model_question {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        for (int i = 5; i > 0; i--) 
-        {
-            for (int j = 1; j <= i; j++) 
-            {
+        for (int i = 5; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(i + " ");
             }
             System.out.println();
-    }
-}
-}
-
-class random
-{
-    public static void main(String args[])
-    {
-       for(int i = 0; i<3; i++)
-       {
-        for(int j = 0; j<2; j++)
-        {
-            int number = (int)(Math.random()*10);
-            System.out.println(number);
         }
-       }
     }
 }
 
-class pattern_choice
-{
-    public static void main(String args[])
-    {
+class random {
+    public static void main(String args[]) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 2; j++) {
+                int number = (int) (Math.random() * 10);
+                System.out.println(number);
+            }
+        }
+    }
+}
+
+class pattern_choice {
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter :");
         System.out.println("1 - Solid rectangle");
         System.out.println("2 - Right angle triangle");
         System.out.println("3 - Inverted Right angle triangle");
         int choice = in.nextInt();
-        int rows,columns,j,i;
-        switch(choice)
-        {
+        int rows, columns, j, i;
+        switch (choice) {
             case 1:
-            System.out.println("Enter number of rows");
-            rows = in.nextInt();
-            System.out.println("Enter number of columns");
-            columns = in.nextInt();
-            for(i = 1; i<=rows; i++)
-            {
-                for(j = 1; j<=columns; j++)
-                {
-                    System.out.print(" * ");
+                System.out.println("Enter number of rows");
+                rows = in.nextInt();
+                System.out.println("Enter number of columns");
+                columns = in.nextInt();
+                for (i = 1; i <= rows; i++) {
+                    for (j = 1; j <= columns; j++) {
+                        System.out.print(" * ");
+                    }
+                    System.out.println();
                 }
-                System.out.println();
-            }
-            break;
+                break;
             case 2:
-            System.out.println("Enter number of rows");
-            rows = in.nextInt();
-            for(i = 1; i<=rows; i++)
-            {
-                for(j=1; j<=i; j++)
-                {
-                    System.out.print(" * ");
+                System.out.println("Enter number of rows");
+                rows = in.nextInt();
+                for (i = 1; i <= rows; i++) {
+                    for (j = 1; j <= i; j++) {
+                        System.out.print(" * ");
+                    }
+                    System.out.println();
                 }
-                System.out.println();
-            }
-            break;
+                break;
             case 3:
-            System.out.println("Enter number of rows");
-            rows = in.nextInt();
-            for(i=rows; i>=1; i--)
-            {
-                for(j = 1; j<=i; j++)
-                {
-                    System.out.print(" * ");
+                System.out.println("Enter number of rows");
+                rows = in.nextInt();
+                for (i = rows; i >= 1; i--) {
+                    for (j = 1; j <= i; j++) {
+                        System.out.print(" * ");
+                    }
+                    System.out.println();
                 }
-                System.out.println();
-            }
-            break;
+                break;
             default:
-            System.out.println("Invalid input");
-            
+                System.out.println("Invalid input");
+
         }
     }
 }
 
-class oddeven_methods
-{
-    private static String oddeven(int num)
-    {
+class oddeven_methods {
+    private static String oddeven(int num) {
         String ans;
-        if(num%2==0)
-        {
+        if (num % 2 == 0) {
             ans = "Even number";
-        }
-        else
-        {
+        } else {
             ans = "Odd number";
         }
         return ans;
     }
-    public static void main(String args[])
-    {
+
+    public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         String ans;
         int num;
@@ -1264,4 +1147,210 @@ class oddeven_methods
 
     }
 }
+
+class AlternateLetters {
+    public static void main(String args[]) {
+        for (char ch = 'A'; ch <= 'Z'; ch = (char) (ch + 2)) {
+            System.out.println(ch);
+        }
+    }
+}
+
+class DuckNumber {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = in.nextInt();
+        int digit, ctr = 0;
+        int ans = 0;
+        {
+            do {
+                digit = num % 10;
+                num = num / 10;
+                ctr++;
+                if (digit == 0)
+                    ans = 1;
+            } while (num > 0);
+            if (ctr == 3) {
+                if (ans == 1)
+                    System.out.println("Is a duck number");
+                else
+                    System.out.println("Is not a duck number");
+            } else
+                System.out.println("Invalid");
+        }
+    }
+}
+
+/**
+ * Define a class called with the following specifications:
+ * Class name: Eshop
+ * Member variables:
+ * String name: name of the item purchased
+ * double price: Price of the item purchased
+ * Member methods:
+ * void accept(): Accept the name and the price of the item using the methods of
+ * Scanner
+ * class.
+ * void calculate(): To calculate the net amount to be paid by a customer, based
+ * on the
+ * following criteria:
+ * Price Discount
+ * 1000 – 25000 5.0%
+ * 25001 – 57000 7.5 %
+ * 57001 – 100000 10.0%
+ * More than 100000 15.0 %
+ * void display(): To display the name of the item and the net amount to be
+ * paid.
+ * Write the main method to create an object and call the above methods.
+ **/
+class Eshop {
+    String name;
+    double price, amt;
+
+    void accept() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter name of item: ");
+        name = in.nextLine();
+        System.out.print("Enter price of item: ");
+        price = in.nextDouble();
+    }
+
+    void calculate() {
+        if (price >= 1000 && price <= 25000)
+            amt = price - ((price) * 5.0 / 100.0);
+        else if (price >= 25001 && price <= 57000)
+            amt = price - ((price) * 7.5 / 100.0);
+        else if (price >= 57001 && price <= 100000)
+            amt = price - ((price) * 10.0 / 100.0);
+        else if (price > 100000)
+            amt = price = ((price) * 15.0 / 100.0);
+    }
+
+    void display() {
+        System.out.println("Name of item: " + name);
+        System.out.println("Net amount to be paid: " + amt);
+    }
+
+    public static void main(String args[]) {
+        Eshop ob = new Eshop();
+        ob.accept();
+        ob.calculate();
+        ob.display();
+    }
+}
+
+class Mobike {
+    int days, charge;
+    long phno, bno;
+    String name;
+
+    void input() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Customer Name: ");
+        name = in.nextLine();
+        System.out.print("Enter Customer Phone Number: ");
+        phno = in.nextLong();
+        System.out.print("Enter Bike Number: ");
+        bno = in.nextLong();
+        System.out.print("Enter Number of Days: ");
+        days = in.nextInt();
+    }
+
+    public void compute() {
+        if (days <= 5)
+            charge = days * 500;
+        else if (days <= 10)
+            charge = (5 * 500) + ((days - 5) * 400);
+        else
+            charge = (5 * 500) + (5 * 400) + ((days - 10) * 200);
+    }
+
+    public void display() {
+        System.out.println("Bike No.\tPhone No.\tDays\tCharge");
+        System.out.println(bno + "\t" + phno + "\t" + days + "\t" + charge);
+    }
+
+    public static void main(String args[]) {
+        Mobike obj = new Mobike();
+        obj.input();
+        obj.compute();
+        obj.display();
+    }
+}
+
+class Pattern1 {
+    public static void main(String args[]) {
+        for (int i = 49; i <= 57; i++) {
+            for (int j = 49; j <= i; j++) {
+                if (i % 2 == 0)
+                    System.out.print((char) (j + 16));
+                else if (i % 3 == 0)
+                    System.out.print((char) (j + 48));
+                else
+                    System.out.print((char) j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Pattern2 {
+    public static void main(String args[]) {
+        for (int i = 86; i <= 90; i++) {
+            for (int j = 90; j >= i; j--) {
+                System.out.print((char) j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Primee {
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter any integer:");
+        int i = in.nextInt();
+
+        if (i <= 1) {
+            System.out.println("Please enter a positive integer greater than 1.");
+            return;
+        }
+
+        if (isPrime(i)) {
+            System.out.println("It is a prime number");
+        } else {
+            System.out.println("It is a composite number");
+
+            int smallerPrime = i - 1;
+            int largerPrime = i + 1;
+
+            while (true) {
+                if (isPrime(smallerPrime)) {
+                    System.out.println(smallerPrime + " is the nearest prime number");
+                    break;
+                }
+                if (isPrime(largerPrime)) {
+                    System.out.println(largerPrime + " is the nearest prime number");
+                    break;
+                }
+                smallerPrime--;
+                largerPrime++;
+            }
+        }
+    }
+}
+
 
