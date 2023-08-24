@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Student
+comment0.text=Question\ 1\r\nDesign\ a\ class\ with\ the\ following\ specifications\:\ \ \r\nClass\ name\:\ \ \ Student\ \r\nMember\ variables\:\ \ name\ \u2013\ name\ of\ student\ \r\n\ \ \ \ age\ \u2013\ age\ of\ student\ \r\n\ \ \ \ mks\ \u2013marks\ obtained\ \r\n\ \ \ \ stream\ \u2013\ stream\ allocated\ \r\n\ \ \ \ (Declare\ the\ variables\ using\ appropriate\ data\ types)\ \r\nMember\ methods\:\ \ \r\nvoid\ accept()\ \ \u2013\ \ Accept\ name,\ age\ and\ marks\ using\ methods\ of\ Scanner\ class.\ \r\nvoid\ allocation()\ \u2013\ \ Allocate\ the\ stream\ as\ per\ following\ criteria\:\ \r\n\ \ \ \ \ mks\ stream\ \r\n\ \ \ \ \ >\ \=\ 300\ Science\ and\ Computer\ \r\n\ \ \ \ \ >\ \=\ 200\ and\ <\ 300\ Commerce\ and\ Computer\ \r\n\ \ \ \ \ >\ \=\ 75\ and\ 200\ Arts\ and\ Animation\ \r\n\ \ \ \ \ <\ 75\ Try\ Again\ \r\nvoid\ print()\ \ \u2013\ \ Display\ student\ name,\ age,\ mks\ and\ stream\ allocated.\ \r\nCall\ all\ the\ above\ methods\ in\ main\ method\ using\ an\ object.*
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ accept()
+comment3.params=
+comment3.target=void\ allocation()
+comment4.params=
+comment4.target=void\ print()
+numComments=5
