@@ -947,6 +947,7 @@ class calculator // asks user to input two numbers and what operation to perform
     // this program creates an inverted right angled triangle with the amount of
     // rows the user wants
     class inverted_right_angle_triangle {
+        
         public static void main(String args[]) {
             Scanner in = new Scanner(System.in);
             int rows;
@@ -1597,5 +1598,15 @@ class function_overloading {
         int number = in.nextInt();
         obj.display(number);
 
+    }
+}
+
+class pattern_rect {
+    public static void main(String args[]) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 9; j++)
+                System.out.print(j);
+            System.out.println();
+        }
     }
 }
