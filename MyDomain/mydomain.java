@@ -1154,32 +1154,6 @@ class calculator // asks user to input two numbers and what operation to perform
         }
     }
 
-    class DuckNumber {
-        public static void main(String args[]) {
-            Scanner in = new Scanner(System.in);
-            System.out.print("Enter number: ");
-            int num = in.nextInt();
-            int digit, ctr = 0;
-            int ans = 0;
-            {
-                do {
-                    digit = num % 10;
-                    num = num / 10;
-                    ctr++;
-                    if (digit == 0)
-                        ans = 1;
-                } while (num > 0);
-                if (ctr == 3) {
-                    if (ans == 1)
-                        System.out.println("Is a duck number");
-                    else
-                        System.out.println("Is not a duck number");
-                } else
-                    System.out.println("Invalid");
-            }
-        }
-    }
-
     /**
      * Define a class called with the following specifications:
      * Class name: Eshop
@@ -1541,3 +1515,87 @@ class PrintOverload {
  * Output: Sum of one digit numbers : 2 + 4 + 9 + 3 + 1 = 19
  * Sum of two digit numbers : 12 + 18 + 25 + 32 + 20 = 107
  **/
+
+public class Java {
+    int one(int a, int b) {
+        int c = a + b;
+        return c;
+    }
+
+    double one(double d, double e) {
+        double f = d * e;
+        return f;
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        Java obj = new Java();
+        System.out.println("Enter the value of y, z, p, and q");
+        int y = in.nextInt();
+        int z = in.nextInt();
+        double p = in.nextDouble();
+        double q = in.nextDouble();
+        int c = obj.one(y, z);
+        double f = obj.one(p, q);
+    }
+}
+
+class DuckNumber {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = in.nextInt();
+        int digit, ctr = 0;
+        int ans = 0;
+        {
+            do {
+                digit = num % 10;
+                num = num / 10;
+                ctr++;
+                if (digit == 0)
+                    ans = 1;
+            } while (num > 0);
+            if (ctr == 3) {
+                if (ans == 1)
+                    System.out.println("Is a duck number");
+                else
+                    System.out.println("Is not a duck number");
+            } else
+                System.out.println("Invalid");
+        }
+    }
+}
+
+class function_overloading {
+
+    void display() {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(j);
+            System.out.println();
+        }
+    }
+
+    void display(int n) {
+        int digit;
+        double sqrt;
+        do {
+            digit = n % 10;
+            n = n / 10;
+            sqrt = Math.sqrt(digit);
+            System.out.println(sqrt);
+        } while (n > 0);
+
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        function_overloading obj = new function_overloading();
+        obj.display();
+        System.out.print("Enter Number: ");
+        int number = in.nextInt();
+        obj.display(number);
+
+    }
+}
