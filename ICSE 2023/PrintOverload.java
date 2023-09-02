@@ -12,7 +12,6 @@ equal to sum of odd digits.
      e.g. 3669 odd digits sum = 3 + 9 = 12 
        even digits sum = 6 + 6 = 12 
      3669 is a lead number.**/
-import java.util.Scanner;
 public class PrintOverload 
 {
     public void print() 

@@ -1177,6 +1177,7 @@ class calculator // asks user to input two numbers and what operation to perform
      * paid.
      * Write the main method to create an object and call the above methods.
      **/
+
     class Eshop {
         String name;
         double price, amt;
@@ -1612,6 +1613,8 @@ class pattern_rect {
     }
 }
 
+
+//this program consists of all major patterns for you to choose from
 class desired_pattern {
 
     // 1
