@@ -1694,15 +1694,97 @@ class desired_pattern {
         }
     }
 
-//  1  2  3  4  5  6  7  8  9  10 
-//  1  2  3  4  5  6  7  8  9  10 
-//  1  2  3  4  5  6  7  8  9  10
-//  1  2  3  4  5  6  7  8  9  10
-//  1  2  3  4  5  6  7  8  9  10
+    // 1 2 3 4 5 6 7 8 9 10
+    // 1 2 3 4 5 6 7 8 9 10
+    // 1 2 3 4 5 6 7 8 9 10
+    // 1 2 3 4 5 6 7 8 9 10
+    // 1 2 3 4 5 6 7 8 9 10
     void pattern7(int rows, int columns) {
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= columns; j++)
                 System.out.print(" " + j + " ");
+            System.out.println();
+        }
+    }
+
+    // 1
+    // 333
+    // 55555
+    // 7777777
+    void pattern8(int rows) {
+        for (int i = 0; i <= rows; i++) {
+            i++;
+            for (int j = 1; j <= i; j++)
+                System.out.print(i);
+            System.out.println();
+        }
+    }
+
+    // 1
+    // 123
+    // 12345
+    // 1234567
+    void pattern9(int rows) {
+        for (int i = 0; i <= rows; i++) {
+            i++;
+            for (int j = 1; j <= i; j++)
+                System.out.print(j);
+            System.out.println();
+        }
+    }
+
+    // A
+    // BB
+    // CCC
+    // DDDD
+    // EEEEE
+    void pattern10(char r) {
+        int rows = (int) r;
+        for (int i = 65; i <= rows; i++) {
+            for (int j = 65; j <= i; j++)
+                System.out.print((char) i);
+            System.out.println();
+        }
+    }
+
+    // A
+    // AB
+    // ABC
+    // ABCD
+    // ABCDE
+    void pattern11(char r) {
+        int rows = (int) r;
+        for (int i = 65; i <= rows; i++) {
+            for (int j = 65; j <= i; j++)
+                System.out.print((char) j);
+            System.out.println();
+        }
+    }
+
+    // a
+    // bb
+    // ccc
+    // dddd
+    // eeeee
+    void pattern12(char r) {
+        int rows = (int) r;
+        for (int i = 97; i <= rows; i++) {
+            for (int j = 97; j <= i; j++)
+                System.out.print((char) i);
+            System.out.println();
+        }
+    }
+
+    // a
+    // ab
+    // abc
+    // abcd
+    // abcde
+    void pattern13(char r) {
+        int rows = (int) r;
+        for (int i = 97; i <= rows; i++) {
+            for (int j = 97; j <= i; j++)
+                System.out.print((char) j);
             System.out.println();
         }
     }
@@ -1712,6 +1794,7 @@ class desired_pattern {
         desired_pattern obj = new desired_pattern();
         int rows;
         int columns;
+        char r;
 
         System.out.println("Select desired type of pattern:-");
 
@@ -1777,35 +1860,87 @@ class desired_pattern {
                 " 1  2  3  4  5  6  7  8  9  10");
 
         System.out.println("");
-        System.out.print("Which pattern:- ");
+
+        System.out.println("h]");
+        System.out.println("1\r\n" + //
+                "333\r\n" + //
+                "55555\r\n" + //
+                "7777777");
+
+        System.out.println("");
+
+        System.out.println("i]");
+        System.out.println("1\r\n" + //
+                "123\r\n" + //
+                "12345\r\n" + //
+                "1234567");
+
+        System.out.println("");
+
+        System.out.println("j]");
+        System.out.println("A\r\n" + //
+                "BB\r\n" + //
+                "CCC\r\n" + //
+                "DDDD\r\n" + //
+                "EEEEE");
+
+        System.out.println("");
+
+        System.out.println("k]");
+        System.out.println("A    \r\n" + //
+                "AB   \r\n" + //
+                "ABC  \r\n" + //
+                "ABCD \r\n" + //
+                "ABCDE");
+
+        System.out.println("");
+
+        System.out.println("l]");
+        System.out.println("a    \r\n" + //
+                "bb   \r\n" + //
+                "ccc  \r\n" + //
+                "dddd \r\n" + //
+                "eeeee");
+
+        System.out.println("");
+
+        System.out.println("m]");
+        System.out.println("a    \r\n" + //
+                "ab   \r\n" + //
+                "abc  \r\n" + //
+                "abcd \r\n" + //
+                "abcde");
+
+        System.out.println("");
+        System.out.print("Which pattern(only enter letter):- ");
         char choice = in.next().charAt(0);
         switch (choice) {
             case 'a':
-                System.out.print("Enter rows: ");
+                System.out.print("Enter number: ");
                 rows = in.nextInt();
                 obj.pattern1(rows);
                 break;
 
             case 'b':
-                System.out.print("Enter rows: ");
+                System.out.print("Enter number: ");
                 rows = in.nextInt();
                 obj.pattern2(rows);
                 break;
 
             case 'c':
-                System.out.print("Enter rows: ");
+                System.out.print("Enter number: ");
                 rows = in.nextInt();
                 obj.pattern3(rows);
                 break;
 
             case 'd':
-                System.out.print("Enter rows: ");
+                System.out.print("Enter number: ");
                 rows = in.nextInt();
                 obj.pattern4(rows);
                 break;
 
             case 'e':
-                System.out.print("Enter rows: ");
+                System.out.print("Enter number: ");
                 rows = in.nextInt();
                 obj.pattern5(rows);
                 break;
@@ -1824,6 +1959,42 @@ class desired_pattern {
                 System.out.print("Enter columns: ");
                 columns = in.nextInt();
                 obj.pattern7(rows, columns);
+                break;
+
+            case 'h':
+                System.out.print("Enter number: ");
+                rows = in.nextInt();
+                obj.pattern8(rows);
+                break;
+
+            case 'i':
+                System.out.print("Enter number: ");
+                rows = in.nextInt();
+                obj.pattern9(rows);
+                break;
+
+            case 'j':
+                System.out.print("Enter letter: ");
+                r = in.next().charAt(0);
+                obj.pattern10(r);
+                break;
+
+            case 'k':
+                System.out.print("Enter letter: ");
+                r = in.next().charAt(0);
+                obj.pattern11(r);
+                break;
+
+            case 'l':
+                System.out.print("Enter letter: ");
+                r = in.next().charAt(0);
+                obj.pattern12(r);
+                break;
+
+            case 'm':
+                System.out.print("Enter letter: ");
+                r = in.next().charAt(0);
+                obj.pattern13(r);
                 break;
 
             default:
