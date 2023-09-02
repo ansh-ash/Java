@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 class odd_even {
     public static void main(String args[]) {
@@ -1694,6 +1694,11 @@ class desired_pattern {
         }
     }
 
+//  1  2  3  4  5  6  7  8  9  10 
+//  1  2  3  4  5  6  7  8  9  10 
+//  1  2  3  4  5  6  7  8  9  10
+//  1  2  3  4  5  6  7  8  9  10
+//  1  2  3  4  5  6  7  8  9  10
     void pattern7(int rows, int columns) {
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= columns; j++)
