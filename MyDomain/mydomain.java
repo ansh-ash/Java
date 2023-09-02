@@ -1613,8 +1613,7 @@ class pattern_rect {
     }
 }
 
-
-//this program consists of all major patterns for you to choose from
+// this program consists of all major patterns for you to choose from
 class desired_pattern {
 
     // 1
@@ -1792,6 +1791,35 @@ class desired_pattern {
         }
     }
 
+    // 12345
+    // 1234
+    // 123
+    // 12
+    // 1
+    void pattern14(int rows) {
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(j);
+            System.out.println();
+        }
+    }
+
+    // 13579
+    // 1357
+    // 135
+    // 13
+    // 1
+    void pattern15(int rows) {
+        for (int i = rows; i >= 1; i--) {
+            i--;
+            for (int j = 0; j <= i; j++) {
+                j++;
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         desired_pattern obj = new desired_pattern();
@@ -1915,6 +1943,24 @@ class desired_pattern {
                 "abcde");
 
         System.out.println("");
+
+        System.out.println("n]");
+        System.out.println("12345\r\n" + //
+                "1234\r\n" + //
+                "123\r\n" + //
+                "12\r\n" + //
+                "1");
+
+        System.out.println("");
+
+        System.out.println("o]");
+        System.out.println("13579\r\n" + //
+                "1357\r\n" + //
+                "135\r\n" + //
+                "13\r\n" + //
+                "1");
+
+        System.out.println("");
         System.out.print("Which pattern(only enter letter):- ");
         char choice = in.next().charAt(0);
         switch (choice) {
@@ -1998,6 +2044,18 @@ class desired_pattern {
                 System.out.print("Enter letter: ");
                 r = in.next().charAt(0);
                 obj.pattern13(r);
+                break;
+
+            case 'n':
+                System.out.print("Enter number: ");
+                rows = in.nextInt();
+                obj.pattern14(rows);
+                break;
+
+            case 'o':
+                System.out.print("Enter number: ");
+                rows = in.nextInt();
+                obj.pattern15(rows);
                 break;
 
             default:
