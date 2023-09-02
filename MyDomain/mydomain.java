@@ -1621,7 +1621,6 @@ class desired_pattern {
     // 333
     // 4444
     // 55555
-
     void pattern1(int rows) {
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= i; j++)
@@ -1635,7 +1634,6 @@ class desired_pattern {
     // 123
     // 1234
     // 12345
-
     void pattern2(int rows) {
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= i; j++)
