@@ -2001,6 +2001,5 @@ class desired_pattern {
                 System.out.println("Invalid Input");
                 break;
         }
-
     }
 }
