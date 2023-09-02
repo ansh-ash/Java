@@ -947,7 +947,7 @@ class calculator // asks user to input two numbers and what operation to perform
     // this program creates an inverted right angled triangle with the amount of
     // rows the user wants
     class inverted_right_angle_triangle {
-        
+
         public static void main(String args[]) {
             Scanner in = new Scanner(System.in);
             int rows;
@@ -1206,10 +1206,10 @@ class calculator // asks user to input two numbers and what operation to perform
         }
 
         public static void main(String args[]) {
-            Eshop ob = new Eshop();
-            ob.accept();
-            ob.calculate();
-            ob.display();
+            Eshop obj = new Eshop();
+            obj.accept();
+            obj.calculate();
+            obj.display();
         }
     }
 
@@ -1230,7 +1230,7 @@ class calculator // asks user to input two numbers and what operation to perform
             days = in.nextInt();
         }
 
-        public void compute() {
+        void compute() {
             if (days <= 5)
                 charge = days * 500;
             else if (days <= 10)
@@ -1239,7 +1239,7 @@ class calculator // asks user to input two numbers and what operation to perform
                 charge = (5 * 500) + (5 * 400) + ((days - 10) * 200);
         }
 
-        public void display() {
+        void display() {
             System.out.println("Bike No.\tPhone No.\tDays\tCharge");
             System.out.println(bno + "\t" + phno + "\t" + days + "\t" + charge);
         }
@@ -1517,7 +1517,7 @@ class PrintOverload {
  * Sum of two digit numbers : 12 + 18 + 25 + 32 + 20 = 107
  **/
 
-public class Java {
+class Java {
     int one(int a, int b) {
         int c = a + b;
         return c;
@@ -1603,10 +1603,228 @@ class function_overloading {
 
 class pattern_rect {
     public static void main(String args[]) {
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 9; j++)
+        for (int i = 1; i <= 9; i++) {
+            System.out.print(i);
+            if (i % 3 == 0) {
+                System.out.println();
+            }
+        }
+    }
+}
+
+class desired_pattern {
+
+    // 1
+    // 22
+    // 333
+    // 4444
+    // 55555
+
+    void pattern1(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(i);
+            System.out.println();
+        }
+    }
+
+    // 1
+    // 12
+    // 123
+    // 1234
+    // 12345
+
+    void pattern2(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++)
                 System.out.print(j);
             System.out.println();
         }
+    }
+
+    // 11111
+    // 2222
+    // 333
+    // 44
+    // 5
+    void pattern3(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = rows; j >= i; j--)
+                System.out.print(i);
+            System.out.println();
+        }
+    }
+
+    // 54321
+    // 5432
+    // 543
+    // 54
+    // 5
+    void pattern4(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = rows; j >= i; j--)
+                System.out.print(j);
+            System.out.println();
+        }
+    }
+
+    // 55555
+    // 4444
+    // 333
+    // 22
+    // 1
+    void pattern5(int rows) {
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(i);
+            System.out.println();
+        }
+    }
+
+    // 1 1 1 1 1 1 1 1 1 1
+    // 2 2 2 2 2 2 2 2 2 2
+    // 3 3 3 3 3 3 3 3 3 3
+    // 4 4 4 4 4 4 4 4 4 4
+    // 5 5 5 5 5 5 5 5 5 5
+    void pattern6(int rows, int columns) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++)
+                System.out.print(" " + i + " ");
+            System.out.println();
+        }
+    }
+
+    void pattern7(int rows, int columns) {
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++)
+                System.out.print(" " + j + " ");
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        desired_pattern obj = new desired_pattern();
+        int rows;
+        int columns;
+
+        System.out.println("Select desired type of pattern:-");
+
+        System.out.println("a]");
+        System.out.println("1\r\n" + //
+                "22\r\n" + //
+                "333\r\n" + //
+                "4444\r\n" + //
+                "55555");
+
+        System.out.println("");
+
+        System.out.println("b]");
+        System.out.println("1\r\n" + //
+                "12\r\n" + //
+                "123\r\n" + //
+                "1234\r\n" + //
+                "12345");
+
+        System.out.println("");
+
+        System.out.println("c]");
+        System.out.println("11111\r\n" + //
+                "2222\r\n" + //
+                "333\r\n" + //
+                "44\r\n" + //
+                "5");
+
+        System.out.println("");
+
+        System.out.println("d]");
+        System.out.println("54321\r\n" + //
+                "5432\r\n" + //
+                "543\r\n" + //
+                "54\r\n" + //
+                "5");
+
+        System.out.println("");
+
+        System.out.println("e]");
+        System.out.println("55555\r\n" + //
+                "4444\r\n" + //
+                "333\r\n" + //
+                "22\r\n" + //
+                "1");
+
+        System.out.println("");
+
+        System.out.println("f]");
+        System.out.println(" 1  1  1  1  1  1  1  1  1  1 \r\n" + //
+                " 2  2  2  2  2  2  2  2  2  2 \r\n" + //
+                " 3  3  3  3  3  3  3  3  3  3\r\n" + //
+                " 4  4  4  4  4  4  4  4  4  4\r\n" + //
+                " 5  5  5  5  5  5  5  5  5  5");
+
+        System.out.println("");
+
+        System.out.println("g]");
+        System.out.println(" 1  2  3  4  5  6  7  8  9  10 \r\n" + //
+                " 1  2  3  4  5  6  7  8  9  10 \r\n" + //
+                " 1  2  3  4  5  6  7  8  9  10\r\n" + //
+                " 1  2  3  4  5  6  7  8  9  10\r\n" + //
+                " 1  2  3  4  5  6  7  8  9  10");
+
+        System.out.println("");
+        System.out.print("Which pattern:- ");
+        char choice = in.next().charAt(0);
+        switch (choice) {
+            case 'a':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                obj.pattern1(rows);
+                break;
+
+            case 'b':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                obj.pattern2(rows);
+                break;
+
+            case 'c':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                obj.pattern3(rows);
+                break;
+
+            case 'd':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                obj.pattern4(rows);
+                break;
+
+            case 'e':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                obj.pattern5(rows);
+                break;
+
+            case 'f':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                System.out.print("Enter columns: ");
+                columns = in.nextInt();
+                obj.pattern6(rows, columns);
+                break;
+
+            case 'g':
+                System.out.print("Enter rows: ");
+                rows = in.nextInt();
+                System.out.print("Enter columns: ");
+                columns = in.nextInt();
+                obj.pattern7(rows, columns);
+                break;
+
+            default:
+                System.out.println("Invalid Input");
+                break;
+        }
+
     }
 }
