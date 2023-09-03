@@ -54,15 +54,13 @@ public class Student {
         System.out.println("Marks : " + mks);
         System.out.println("Stream Alloted : " + stream);
     }
-public static void main(String args[])
-    {
 
-        {
-            Student ob = new Student();
-            ob.accept();
-            ob.allocation();
-            ob.print();
-        }
+    public static void main(String args[]) {
+        Student ob = new Student();
+        ob.accept();
+        ob.allocation();
+        ob.print();
+
     }
 }
 
@@ -90,16 +88,7 @@ public static void main(String args[])
  * 3669 is a lead number.
  **/
 
-public class PrintOverload {
-    public void print() {
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 4; j++) {
-                System.out.print(i + "     ");
-            }
-            System.out.println();
-        }
-    }
-}
+
 
 /**
  * Question 4

@@ -1475,14 +1475,41 @@ class Student {
  * 3669 is a lead number.
  **/
 
-class PrintOverload {
-    public void print() {
+class question3_2023 {
+    void print() {
         for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 4; j++) {
-                System.out.print(i + "     ");
-            }
+            for (int j = 1; j <= 4; j++)
+                System.out.print(i + " ");
             System.out.println();
         }
+    }
+
+    void print(int n) {
+        int osum = 0;
+        int esum = 0;
+        int digit;
+        do {
+            digit = n % 10;
+            n = n / 10;
+            if (digit % 2 == 0)
+                esum += digit;
+            else
+                osum += digit;
+        } while (n > 0);
+        if (osum == esum)
+            System.out.println("Is a Lead Number");
+        else
+            System.out.println("Is not a lead number");
+
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        question3_2023 obj = new question3_2023();
+        obj.print();
+        System.out.print("Enter number : ");
+        int number = in.nextInt();
+        obj.print(number);
     }
 }
 
