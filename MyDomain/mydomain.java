@@ -2089,3 +2089,47 @@ class desired_pattern {
         }
     }
 }
+
+// this program will help you find the middle term of the number..lets say you
+// input some very large number like
+// 2342412342142421342341231313131231321312, it would print the middle digit of
+// the number
+
+class middle_digit {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number : ");
+        long num1 = in.nextLong();
+        long num = num1;
+        long digit;
+        long dig;
+        int ctr = 0;
+        int ctr1 = 0;
+        double mid;
+        int term_no = 0;
+        do {
+            digit = num1 % 10;
+            num1 = num1 / 10;
+            ctr++;
+        } while (num1 > 0);
+        if (ctr % 2 == 0) {
+            System.out.println(
+                    "Since your number has even number of digits, printing the number at the halfth term of the number of terms.....eg(1023)-->0");
+            mid = Math.ceil(ctr / 2.0);
+            term_no = (int) (mid);
+        } else if (ctr % 2 != 0) {
+            mid = Math.ceil(ctr / 2.0);
+            term_no = (int) (mid);
+        }
+        do {
+            dig = num % 10;
+            num = num / 10;
+            ctr1++;
+            if (ctr1 == term_no)
+                System.out.println("The middle digit of the number you inputed is :- " + dig);
+            else
+                System.out.println();
+
+        } while (num > 0);
+    }
+}
