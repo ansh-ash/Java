@@ -2133,3 +2133,39 @@ class middle_digit {
         } while (num > 0);
     }
 }
+
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        int n = number;
+
+        // Call the reverseNumber method to reverse the number
+        int reversedNumber = reverseNumber(number);
+
+        // Display the reversed number
+        if (reversedNumber == n)
+            System.out.println("Is a Palindrome Number");
+        else
+            System.out.println("Not a Palindrome Number");
+
+        System.out.println("Reversed number: " + reversedNumber);
+        scanner.close();
+    }
+
+    // Method to reverse the number
+    public static int reverseNumber(int num) {
+        int reversed = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+
+        return reversed;
+    }
+}
