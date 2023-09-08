@@ -1,4 +1,4 @@
-import java.util.Scanner;
+﻿import java.util.Scanner;
 
 class odd_even {
     public static void main(String args[]) {
@@ -2114,7 +2114,7 @@ class middle_digit {
         } while (num1 > 0);
         if (ctr % 2 == 0) {
             System.out.println(
-                    "Since your number has even number of digits, printing the number at the halfth term of the number of terms.....eg(1023)-->0");
+                    "Since your number has even number of digits, printing the number at the halfth term of the number of terms +1 .....eg(1023)-->2");
             mid = Math.ceil(ctr / 2.0);
             term_no = (int) (mid);
         } else if (ctr % 2 != 0) {
@@ -2127,9 +2127,6 @@ class middle_digit {
             ctr1++;
             if (ctr1 == term_no)
                 System.out.println("The middle digit of the number you inputed is :- " + dig);
-            else
-                System.out.println();
-
         } while (num > 0);
     }
 }
