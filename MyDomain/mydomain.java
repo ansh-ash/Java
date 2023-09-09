@@ -2156,7 +2156,6 @@ class Palindrome {
     // Method to reverse the number
     public static int reverseNumber(int num) {
         int reversed = 0;
-
         while (num != 0) {
             int digit = num % 10;
             reversed = reversed * 10 + digit;
@@ -2164,5 +2163,36 @@ class Palindrome {
         }
 
         return reversed;
+    }
+}
+
+class pattern_funtion_overloading {
+    public void d() {
+        for (int i = 86; i >= 80; i -= 2) {
+            for (int j = 79; j <= i; j++) {
+                j++;
+                System.out.print((char) j);
+            }
+            System.out.println();
+        }
+    }
+
+    public void f() {
+        int a = 97;
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print((char) a + " ");
+            }
+            a++;
+            if (i == 2)
+                a = 65;
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[]) {
+        pattern_funtion_overloading obj = new pattern_funtion_overloading();
+        obj.d();
+        obj.f();
     }
 }
