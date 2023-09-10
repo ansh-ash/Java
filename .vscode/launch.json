@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "middle_digit",
+            "request": "launch",
+            "mainClass": "middle_digit",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "UniqueNumberChecker",
+            "request": "launch",
+            "mainClass": "UniqueNumberChecker",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "Amicable_number",
+            "request": "launch",
+            "mainClass": "Amicable_number",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "norm_number",
+            "request": "launch",
+            "mainClass": "norm_number",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "Library",
             "request": "launch",
             "mainClass": "Library",

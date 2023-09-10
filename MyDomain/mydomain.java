@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Set;
 
 class odd_even {
     public static void main(String args[]) {
@@ -2026,10 +2028,8 @@ class middle_digit {
         System.out.print("Enter number : ");
         long num1 = in.nextLong();
         long num = num1;
-        long digit;
-        long dig;
-        int ctr = 0;
-        int ctr1 = 0;
+        long digit, dig;
+        int ctr = 0, ctr1 = 0;
         double mid;
         int term_no = 0;
         do {
@@ -2040,7 +2040,7 @@ class middle_digit {
         if (ctr % 2 == 0) {
             System.out.println(
                     "Since your number has even number of digits, printing the number at the halfth term of the number of terms +1 .....eg(1023)-->2");
-            mid = Math.ceil(ctr / 2.0);
+            mid = ctr / 2.0;
             term_no = (int) (mid);
         } else if (ctr % 2 != 0) {
             mid = Math.ceil(ctr / 2.0);
@@ -2266,5 +2266,85 @@ class Library {
         ob.input();
         ob.calculate();
         ob.printing();
+    }
+}
+
+class norm_number {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int num, digit, prod, sum = 0;
+        double sqrt;
+        System.out.print("Enter number: ");
+        num = in.nextInt();
+        int n = num;
+        do {
+            digit = num % 10;
+            num = num / 10;
+            prod = digit * digit;
+            sum = sum + prod;
+        } while (num > 0);
+        sqrt = Math.sqrt(sum);
+        System.out.println("The norm number of " + n + " is " + sqrt);
+    }
+}
+
+class Amicable_number {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter two numbers:");
+        int num1 = in.nextInt();
+        int num2 = in.nextInt();
+        int sum1 = 0, sum2 = 0;
+        int n1, n2;
+        n1 = num1;
+        n2 = num2;
+        for (int i = 1; i < num1; i++) {
+            if (num1 % i == 0)
+                sum1 = sum1 + i;
+        }
+        for (int i = 1; i < num2; i++) {
+            if (num2 % i == 0)
+                sum2 = sum2 + i;
+        }
+        if (sum1 == n2 && sum2 == n1)
+            System.out.println("Is a Amicable number");
+        else
+            System.out.println("Is not a Amicable number");
+    }
+}
+
+class UniqueNumberChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number: ");
+        int number = scanner.nextInt();
+
+        if (isUniqueNumber(number)) {
+            System.out.println(number + " is a unique number.");
+        } else {
+            System.out.println(number + " is not a unique number.");
+        }
+
+        scanner.close();
+    }
+
+    public static boolean isUniqueNumber(int number) {
+        Set<Integer> digitSet = new HashSet<>();
+
+        while (number > 0) {
+            int digit = number % 10;
+
+            // If the digit is already in the set, it's not unique.
+            if (digitSet.contains(digit)) {
+                return false;
+            }
+
+            digitSet.add(digit);
+            number /= 10;
+        }
+
+        // If we reached here, all digits are unique.
+        return true;
     }
 }
