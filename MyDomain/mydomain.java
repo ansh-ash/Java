@@ -1,4 +1,4 @@
-ï»¿import java.util.Scanner;
+import java.util.Scanner;
 
 class odd_even {
     public static void main(String args[]) {
@@ -1000,14 +1000,14 @@ class calculator // asks user to input two numbers and what operation to perform
                     System.out.println("Enter degree in celsius");
                     c = in.nextDouble();
                     f = (c) * (9.0 / 5.0) + (32.0);
-                    System.out.println(c + "Â°c in farenheit is " + f + "Â°f");
+                    System.out.println(c + "°c in farenheit is " + f + "°f");
                     break;
                 case 2:
                     System.out.println("You chose Farenheit -----> Celsius");
                     System.out.println("Enter degree in farenheit");
                     f = in.nextDouble();
                     c = ((f) - (32.0)) * (5.0 / 9.0);
-                    System.out.println(f + "Â°f in celsius is " + c + "Â°c");
+                    System.out.println(f + "°f in celsius is " + c + "°c");
                     break;
             }
         }
@@ -1169,89 +1169,14 @@ class calculator // asks user to input two numbers and what operation to perform
      * on the
      * following criteria:
      * Price Discount
-     * 1000 â€“ 25000 5.0%
-     * 25001 â€“ 57000 7.5 %
-     * 57001 â€“ 100000 10.0%
+     * 1000 – 25000 5.0%
+     * 25001 – 57000 7.5 %
+     * 57001 – 100000 10.0%
      * More than 100000 15.0 %
      * void display(): To display the name of the item and the net amount to be
      * paid.
      * Write the main method to create an object and call the above methods.
      **/
-
-    class Eshop {
-        String name;
-        double price, amt;
-
-        void accept() {
-            Scanner in = new Scanner(System.in);
-            System.out.print("Enter name of item: ");
-            name = in.nextLine();
-            System.out.print("Enter price of item: ");
-            price = in.nextDouble();
-        }
-
-        void calculate() {
-            if (price >= 1000 && price <= 25000)
-                amt = price - ((price) * 5.0 / 100.0);
-            else if (price >= 25001 && price <= 57000)
-                amt = price - ((price) * 7.5 / 100.0);
-            else if (price >= 57001 && price <= 100000)
-                amt = price - ((price) * 10.0 / 100.0);
-            else if (price > 100000)
-                amt = price = ((price) * 15.0 / 100.0);
-        }
-
-        void display() {
-            System.out.println("Name of item: " + name);
-            System.out.println("Net amount to be paid: " + amt);
-        }
-
-        public static void main(String args[]) {
-            Eshop obj = new Eshop();
-            obj.accept();
-            obj.calculate();
-            obj.display();
-        }
-    }
-
-    class Mobike {
-        int days, charge;
-        long phno, bno;
-        String name;
-
-        void input() {
-            Scanner in = new Scanner(System.in);
-            System.out.print("Enter Customer Name: ");
-            name = in.nextLine();
-            System.out.print("Enter Customer Phone Number: ");
-            phno = in.nextLong();
-            System.out.print("Enter Bike Number: ");
-            bno = in.nextLong();
-            System.out.print("Enter Number of Days: ");
-            days = in.nextInt();
-        }
-
-        void compute() {
-            if (days <= 5)
-                charge = days * 500;
-            else if (days <= 10)
-                charge = (5 * 500) + ((days - 5) * 400);
-            else
-                charge = (5 * 500) + (5 * 400) + ((days - 10) * 200);
-        }
-
-        void display() {
-            System.out.println("Bike No.\tPhone No.\tDays\tCharge");
-            System.out.println(bno + "\t" + phno + "\t" + days + "\t" + charge);
-        }
-
-        public static void main(String args[]) {
-            Mobike obj = new Mobike();
-            obj.input();
-            obj.compute();
-            obj.display();
-        }
-    }
 
     class Pattern1 {
         public static void main(String args[]) {
@@ -1389,20 +1314,20 @@ class isvowel {
  * Question 1
  * Design a class with the following specifications:
  * Class name: Student
- * Member variables: name â€“ name of student
- * age â€“ age of student
- * mks â€“marks obtained
- * stream â€“ stream allocated
+ * Member variables: name – name of student
+ * age – age of student
+ * mks –marks obtained
+ * stream – stream allocated
  * (Declare the variables using appropriate data types)
  * Member methods:
- * void accept() â€“ Accept name, age and marks using methods of Scanner class.
- * void allocation() â€“ Allocate the stream as per following criteria:
+ * void accept() – Accept name, age and marks using methods of Scanner class.
+ * void allocation() – Allocate the stream as per following criteria:
  * mks stream
  * > = 300 Science and Computer
  * > = 200 and < 300 Commerce and Computer
  * > = 75 and 200 Arts and Animation
  * < 75 Try Again
- * void print() â€“ Display student name, age, mks and stream allocated.
+ * void print() – Display student name, age, mks and stream allocated.
  * Call all the above methods in main method using an object.
  **/
 
@@ -1518,10 +1443,10 @@ class question3_2023 {
  * Define a class to accept a String and print the number of digits, alphabets
  * and special
  * characters in the string.
- * Example: S = â€œKAPILDEV@83â€
- * Output: Number of digits â€“ 2
- * Number of Alphabets â€“ 8
- * Number of Special characters â€“ 1
+ * Example: S = “KAPILDEV@83”
+ * Output: Number of digits – 2
+ * Number of Alphabets – 8
+ * Number of Special characters – 1
  **/
 
 /**
@@ -1530,9 +1455,9 @@ class question3_2023 {
  * Accept a double
  * value from user and search in the array using linear search method. If value
  * is found
- * display message â€œFoundâ€ with its position where it is present in the array.
+ * display message “Found” with its position where it is present in the array.
  * Otherwise
- * display message â€œnot foundâ€.
+ * display message “not found”.
  **/
 
 /**
@@ -2194,5 +2119,152 @@ class pattern_funtion_overloading {
         pattern_funtion_overloading obj = new pattern_funtion_overloading();
         obj.d();
         obj.f();
+    }
+}
+
+class Series {
+    public void series(double n) {
+        int x, sum = 0;
+        for (int i = 1; i <= n; i++) {
+            x = 1 / i;
+            sum = sum + x;
+        }
+        System.out.println("The sum of the iterations is " + sum);
+    }
+
+    public void series(double a, double n) {
+        double x, sum = 0.0;
+        for (int i = 2; i <= n; i = i + 3) {
+            x = i - 1 / Math.pow(a, i);
+            sum = sum + x;
+        }
+        System.out.println("The sum of the iterations is " + sum);
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the value of a and n(number of iterations)");
+        int p = in.nextInt();
+        int q = in.nextInt();
+        Series obj = new Series();
+        obj.series(q);
+        obj.series(p, q);
+    }
+}
+
+class Electronic_shop {
+    String name;
+    double price, amt;
+
+    void accept() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter name of item: ");
+        name = in.nextLine();
+        System.out.print("Enter price of item: ");
+        price = in.nextDouble();
+    }
+
+    void calculate() {
+        if (price >= 1000 && price <= 25000)
+            amt = price - (price * 5.0 / 100.0);
+        else if (price >= 25001 && price <= 57000)
+            amt = price - (price * 7.5 / 100.0);
+        else if (price >= 57001 && price <= 100000)
+            amt = price - (price * 10.0 / 100.0);
+        else if (price > 100000)
+            amt = price - (price * 15.0 / 100.0);
+    }
+
+    void display() {
+        System.out.println("Name of item: " + name);
+        System.out.println("Net amount to be paid: " + amt);
+    }
+
+    public static void main(String args[]) {
+        Electronic_shop obj = new Electronic_shop();
+        obj.accept();
+        obj.calculate();
+        obj.display();
+    }
+}
+
+class Mobike {
+    int days, charge;
+    long phno, bno;
+    String name;
+
+    void input() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Customer Name: ");
+        name = in.nextLine();
+        System.out.print("Enter Customer Phone Number: ");
+        phno = in.nextLong();
+        System.out.print("Enter Bike Number: ");
+        bno = in.nextLong();
+        System.out.print("Enter Number of Days: ");
+        days = in.nextInt();
+    }
+
+    void compute() {
+        if (days <= 5)
+            charge = days * 500;
+        else if (days <= 10)
+            charge = (5 * 500) + ((days - 5) * 400);
+        else
+            charge = (5 * 500) + (5 * 400) + ((days - 10) * 200);
+    }
+
+    void display() {
+        System.out.println("Bike No.\tPhone No.\tDays\tCharge");
+        System.out.println(bno + "\t" + phno + "\t" + days + "\t" + charge);
+    }
+
+    public static void main(String args[]) {
+        Mobike obj = new Mobike();
+        obj.input();
+        obj.compute();
+        obj.display();
+    }
+}
+
+class Library {
+    String name;
+    int days;
+    double fine;
+
+    Library() {
+        name = "";
+        days = 0;
+        fine = 0.0;
+    }
+
+    void input() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Name of the book : ");
+        name = in.nextLine();
+        System.out.print("Number of days return late : ");
+        days = in.nextInt();
+    }
+
+    void calculate() {
+        if (days <= 5)
+            fine = days * 0.4;
+        else if (days >= 5 && days <= 10) {
+            days = days - 5;
+            fine = (5 * 0.4) + (days) * 0.6;
+        } else if (days >= 10)
+            days = days - 10;
+        fine = (5 * 0.4) + (5 * 0.6) + (days * 0.8);
+    }
+
+    void printing() {
+        System.out.println("Fine: Rs " + fine);
+    }
+
+    public static void main(String args[]) {
+        Library ob = new Library();
+        ob.input();
+        ob.calculate();
+        ob.printing();
     }
 }
