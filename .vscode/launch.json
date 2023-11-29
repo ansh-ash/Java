@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "desired_pattern",
+            "request": "launch",
+            "mainClass": "desired_pattern",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "arrays_selectionsort",
+            "request": "launch",
+            "mainClass": "arrays_selectionsort",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "arrays_bubblesort",
             "request": "launch",
             "mainClass": "arrays_bubblesort",
