@@ -1460,6 +1460,28 @@ class question3_2023 {
  * display message �not found�.
  **/
 
+class question7_2023 {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        double a[] = new double[20];
+        System.out.println("Enter 20 numbers");
+        for (int i = 0; i < a.length; i++)
+            a[i] = in.nextDouble();
+        System.out.println("Enter element to be searched : ");
+        double n = in.nextDouble();
+        int pos = -1;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == n)
+                pos = i;
+        }
+        if (pos == -1)
+            System.out.println("Number not found");
+        else
+            System.out.println("Number found at " + (pos + 1) + "th position");
+
+    }
+}
+
 /**
  * Question 6
  * Define a class to accept values in integer array of size 10. Find sum of one
@@ -1470,1145 +1492,1168 @@ class question3_2023 {
  * Sum of two digit numbers : 12 + 18 + 25 + 32 + 20 = 107
  **/
 
-class Java {
-    int one(int a, int b) {
-        int c = a + b;
-        return c;
-    }
-
-    double one(double d, double e) {
-        double f = d * e;
-        return f;
-    }
-
+class question8_2023 {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        Java obj = new Java();
-        System.out.println("Enter the value of y, z, p, and q");
-        int y = in.nextInt();
-        int z = in.nextInt();
-        double p = in.nextDouble();
-        double q = in.nextDouble();
-        int c = obj.one(y, z);
-        double f = obj.one(p, q);
+        int a[] = new int[10];
+        System.out.println("Enter 10 numbers");
+        for (int i = 0; i < a.length; i++)
+            a[i] = in.nextInt();
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int j = 0; j < a.length; j++) {
+            if (a[j] >= 10 && a[j]<100)
+                sum2 += a[j];
+            else if (a[j] < 10 && a[j]>0)
+                sum1 += a[j];
+        }
+        System.out.println("Sum of one digit numbers : "+sum1);
+        System.out.println("Sum of two digit numbers : "+sum2);
+
     }
 }
 
-class DuckNumber {
+    class Java {
+        int one(int a, int b) {
+            int c = a + b;
+            return c;
+        }
 
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter number: ");
-        int num = in.nextInt();
-        int digit, ctr = 0;
-        int ans = 0;
-        {
+        double one(double d, double e) {
+            double f = d * e;
+            return f;
+        }
+
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            Java obj = new Java();
+            System.out.println("Enter the value of y, z, p, and q");
+            int y = in.nextInt();
+            int z = in.nextInt();
+            double p = in.nextDouble();
+            double q = in.nextDouble();
+            int c = obj.one(y, z);
+            double f = obj.one(p, q);
+        }
+    }
+
+    class DuckNumber {
+
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Enter number: ");
+            int num = in.nextInt();
+            int digit, ctr = 0;
+            int ans = 0;
+            {
+                do {
+                    digit = num % 10;
+                    num = num / 10;
+                    ctr++;
+                    if (digit == 0)
+                        ans = 1;
+                } while (num > 0);
+                if (ctr == 3) {
+                    if (ans == 1)
+                        System.out.println("Is a duck number");
+                    else
+                        System.out.println("Is not a duck number");
+                } else
+                    System.out.println("Invalid");
+            }
+        }
+    }
+
+    class function_overloading {
+
+        void display() {
+            for (int i = 1; i <= 5; i++) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(j);
+                System.out.println();
+            }
+        }
+
+        void display(int n) {
+            int digit;
+            double sqrt;
+            do {
+                digit = n % 10;
+                n = n / 10;
+                sqrt = Math.sqrt(digit);
+                System.out.println(sqrt);
+            } while (n > 0);
+
+        }
+
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            function_overloading obj = new function_overloading();
+            obj.display();
+            System.out.print("Enter Number: ");
+            int number = in.nextInt();
+            obj.display(number);
+
+        }
+    }
+
+    class pattern_rect {
+        public static void main(String args[]) {
+            for (int i = 1; i <= 9; i++) {
+                System.out.print(i);
+                if (i % 3 == 0) {
+                    System.out.println();
+                }
+            }
+        }
+    }
+
+    // this program consists of all major patterns for you to choose from
+    class desired_pattern {
+
+        // 1
+        // 22
+        // 333
+        // 4444
+        // 55555
+        void pattern1(int rows) {
+            for (int i = 1; i <= rows; i++) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(i);
+                System.out.println();
+            }
+        }
+
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+        void pattern2(int rows) {
+            for (int i = 1; i <= rows; i++) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(j);
+                System.out.println();
+            }
+        }
+
+        // 11111
+        // 2222
+        // 333
+        // 44
+        // 5
+        void pattern3(int rows) {
+            for (int i = 1; i <= rows; i++) {
+                for (int j = rows; j >= i; j--)
+                    System.out.print(i);
+                System.out.println();
+            }
+        }
+
+        // 54321
+        // 5432
+        // 543
+        // 54
+        // 5
+        void pattern4(int rows) {
+            for (int i = 1; i <= rows; i++) {
+                for (int j = rows; j >= i; j--)
+                    System.out.print(j);
+                System.out.println();
+            }
+        }
+
+        // 55555
+        // 4444
+        // 333
+        // 22
+        // 1
+        void pattern5(int rows) {
+            for (int i = rows; i >= 1; i--) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(i);
+                System.out.println();
+            }
+        }
+
+        // 1 1 1 1 1 1 1 1 1 1
+        // 2 2 2 2 2 2 2 2 2 2
+        // 3 3 3 3 3 3 3 3 3 3
+        // 4 4 4 4 4 4 4 4 4 4
+        // 5 5 5 5 5 5 5 5 5 5
+        void pattern6(int rows, int columns) {
+            for (int i = 1; i <= rows; i++) {
+                for (int j = 1; j <= columns; j++)
+                    System.out.print(" " + i + " ");
+                System.out.println();
+            }
+        }
+
+        // 1 2 3 4 5 6 7 8 9 10
+        // 1 2 3 4 5 6 7 8 9 10
+        // 1 2 3 4 5 6 7 8 9 10
+        // 1 2 3 4 5 6 7 8 9 10
+        // 1 2 3 4 5 6 7 8 9 10
+        void pattern7(int rows, int columns) {
+            for (int i = 1; i <= rows; i++) {
+                for (int j = 1; j <= columns; j++)
+                    System.out.print(" " + j + " ");
+                System.out.println();
+            }
+        }
+
+        // 1
+        // 333
+        // 55555
+        // 7777777
+        void pattern8(int rows) {
+            for (int i = 0; i <= rows; i++) {
+                i++;
+                for (int j = 1; j <= i; j++)
+                    System.out.print(i);
+                System.out.println();
+            }
+        }
+
+        // 1
+        // 123
+        // 12345
+        // 1234567
+        void pattern9(int rows) {
+            for (int i = 0; i <= rows; i++) {
+                i++;
+                for (int j = 1; j <= i; j++)
+                    System.out.print(j);
+                System.out.println();
+            }
+        }
+
+        // A
+        // BB
+        // CCC
+        // DDDD
+        // EEEEE
+        void pattern10(char r) {
+            int rows = (int) r;
+            for (int i = 65; i <= rows; i++) {
+                for (int j = 65; j <= i; j++)
+                    System.out.print((char) i);
+                System.out.println();
+            }
+        }
+
+        // A
+        // AB
+        // ABC
+        // ABCD
+        // ABCDE
+        void pattern11(char r) {
+            int rows = (int) r;
+            for (int i = 65; i <= rows; i++) {
+                for (int j = 65; j <= i; j++)
+                    System.out.print((char) j);
+                System.out.println();
+            }
+        }
+
+        // a
+        // bb
+        // ccc
+        // dddd
+        // eeeee
+        void pattern12(char r) {
+            int rows = (int) r;
+            for (int i = 97; i <= rows; i++) {
+                for (int j = 97; j <= i; j++)
+                    System.out.print((char) i);
+                System.out.println();
+            }
+        }
+
+        // a
+        // ab
+        // abc
+        // abcd
+        // abcde
+        void pattern13(char r) {
+            int rows = (int) r;
+            for (int i = 97; i <= rows; i++) {
+                for (int j = 97; j <= i; j++)
+                    System.out.print((char) j);
+                System.out.println();
+            }
+        }
+
+        // 12345
+        // 1234
+        // 123
+        // 12
+        // 1
+        void pattern14(int rows) {
+            for (int i = rows; i >= 1; i--) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(j);
+                System.out.println();
+            }
+        }
+
+        // 13579
+        // 1357
+        // 135
+        // 13
+        // 1
+        void pattern15(int rows) {
+            for (int i = rows; i >= 1; i--) {
+                i--;
+                for (int j = 0; j <= i; j++) {
+                    j++;
+                    System.out.print(j);
+                }
+                System.out.println();
+            }
+        }
+
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            desired_pattern obj = new desired_pattern();
+            int rows;
+            int columns;
+            char r;
+
+            System.out.println("Select desired type of pattern:-");
+
+            System.out.println("a]");
+            System.out.println("1\r\n" + //
+                    "22\r\n" + //
+                    "333\r\n" + //
+                    "4444\r\n" + //
+                    "55555");
+
+            System.out.println("");
+
+            System.out.println("b]");
+            System.out.println("1\r\n" + //
+                    "12\r\n" + //
+                    "123\r\n" + //
+                    "1234\r\n" + //
+                    "12345");
+
+            System.out.println("");
+
+            System.out.println("c]");
+            System.out.println("11111\r\n" + //
+                    "2222\r\n" + //
+                    "333\r\n" + //
+                    "44\r\n" + //
+                    "5");
+
+            System.out.println("");
+
+            System.out.println("d]");
+            System.out.println("54321\r\n" + //
+                    "5432\r\n" + //
+                    "543\r\n" + //
+                    "54\r\n" + //
+                    "5");
+
+            System.out.println("");
+
+            System.out.println("e]");
+            System.out.println("55555\r\n" + //
+                    "4444\r\n" + //
+                    "333\r\n" + //
+                    "22\r\n" + //
+                    "1");
+
+            System.out.println("");
+
+            System.out.println("f]");
+            System.out.println(" 1  1  1  1  1  1  1  1  1  1 \r\n" + //
+                    " 2  2  2  2  2  2  2  2  2  2 \r\n" + //
+                    " 3  3  3  3  3  3  3  3  3  3\r\n" + //
+                    " 4  4  4  4  4  4  4  4  4  4\r\n" + //
+                    " 5  5  5  5  5  5  5  5  5  5");
+
+            System.out.println("");
+
+            System.out.println("g]");
+            System.out.println(" 1  2  3  4  5  6  7  8  9  10 \r\n" + //
+                    " 1  2  3  4  5  6  7  8  9  10 \r\n" + //
+                    " 1  2  3  4  5  6  7  8  9  10\r\n" + //
+                    " 1  2  3  4  5  6  7  8  9  10\r\n" + //
+                    " 1  2  3  4  5  6  7  8  9  10");
+
+            System.out.println("");
+
+            System.out.println("h]");
+            System.out.println("1\r\n" + //
+                    "333\r\n" + //
+                    "55555\r\n" + //
+                    "7777777");
+
+            System.out.println("");
+
+            System.out.println("i]");
+            System.out.println("1\r\n" + //
+                    "123\r\n" + //
+                    "12345\r\n" + //
+                    "1234567");
+
+            System.out.println("");
+
+            System.out.println("j]");
+            System.out.println("A\r\n" + //
+                    "BB\r\n" + //
+                    "CCC\r\n" + //
+                    "DDDD\r\n" + //
+                    "EEEEE");
+
+            System.out.println("");
+
+            System.out.println("k]");
+            System.out.println("A    \r\n" + //
+                    "AB   \r\n" + //
+                    "ABC  \r\n" + //
+                    "ABCD \r\n" + //
+                    "ABCDE");
+
+            System.out.println("");
+
+            System.out.println("l]");
+            System.out.println("a    \r\n" + //
+                    "bb   \r\n" + //
+                    "ccc  \r\n" + //
+                    "dddd \r\n" + //
+                    "eeeee");
+
+            System.out.println("");
+
+            System.out.println("m]");
+            System.out.println("a    \r\n" + //
+                    "ab   \r\n" + //
+                    "abc  \r\n" + //
+                    "abcd \r\n" + //
+                    "abcde");
+
+            System.out.println("");
+
+            System.out.println("n]");
+            System.out.println("12345\r\n" + //
+                    "1234\r\n" + //
+                    "123\r\n" + //
+                    "12\r\n" + //
+                    "1");
+
+            System.out.println("");
+
+            System.out.println("o]");
+            System.out.println("13579\r\n" + //
+                    "1357\r\n" + //
+                    "135\r\n" + //
+                    "13\r\n" + //
+                    "1");
+
+            System.out.println("");
+            System.out.print("Which pattern(only enter letter):- ");
+            char choice = in.next().charAt(0);
+            switch (choice) {
+                case 'a':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern1(rows);
+                    break;
+
+                case 'b':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern2(rows);
+                    break;
+
+                case 'c':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern3(rows);
+                    break;
+
+                case 'd':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern4(rows);
+                    break;
+
+                case 'e':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern5(rows);
+                    break;
+
+                case 'f':
+                    System.out.print("Enter rows: ");
+                    rows = in.nextInt();
+                    System.out.print("Enter columns: ");
+                    columns = in.nextInt();
+                    obj.pattern6(rows, columns);
+                    break;
+
+                case 'g':
+                    System.out.print("Enter rows: ");
+                    rows = in.nextInt();
+                    System.out.print("Enter columns: ");
+                    columns = in.nextInt();
+                    obj.pattern7(rows, columns);
+                    break;
+
+                case 'h':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern8(rows);
+                    break;
+
+                case 'i':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern9(rows);
+                    break;
+
+                case 'j':
+                    System.out.print("Enter letter: ");
+                    r = in.next().charAt(0);
+                    obj.pattern10(r);
+                    break;
+
+                case 'k':
+                    System.out.print("Enter letter: ");
+                    r = in.next().charAt(0);
+                    obj.pattern11(r);
+                    break;
+
+                case 'l':
+                    System.out.print("Enter letter: ");
+                    r = in.next().charAt(0);
+                    obj.pattern12(r);
+                    break;
+
+                case 'm':
+                    System.out.print("Enter letter: ");
+                    r = in.next().charAt(0);
+                    obj.pattern13(r);
+                    break;
+
+                case 'n':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern14(rows);
+                    break;
+
+                case 'o':
+                    System.out.print("Enter number: ");
+                    rows = in.nextInt();
+                    obj.pattern15(rows);
+                    break;
+
+                default:
+                    System.out.println("Invalid Input");
+                    break;
+            }
+        }
+    }
+
+    // this program will help you find the middle term of the number..lets say you
+    // input some very large number like
+    // 2342412342142421342341231313131231321312, it would print the middle digit of
+    // the number
+
+    class middle_digit {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Enter number : ");
+            long num1 = in.nextLong();
+            long num = num1;
+            long digit, dig;
+            int ctr = 0, ctr1 = 0;
+            double mid;
+            int term_no = 0;
+            do {
+                digit = num1 % 10;
+                num1 = num1 / 10;
+                ctr++;
+            } while (num1 > 0);
+            if (ctr % 2 == 0) {
+                System.out.println(
+                        "Since your number has even number of digits, printing the number at the halfth term of the number of terms +1 .....eg(1023)-->2");
+                mid = ctr / 2.0;
+                term_no = (int) (mid);
+            } else if (ctr % 2 != 0) {
+                mid = Math.ceil(ctr / 2.0);
+                term_no = (int) (mid);
+            }
+            do {
+                dig = num % 10;
+                num = num / 10;
+                ctr1++;
+                if (ctr1 == term_no)
+                    System.out.println("The middle digit of the number you inputed is :- " + dig);
+            } while (num > 0);
+        }
+    }
+
+    class Palindrome {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            // Prompt the user to enter a number
+            System.out.print("Enter a number: ");
+            int number = scanner.nextInt();
+            int n = number;
+
+            // Call the reverseNumber method to reverse the number
+            int reversedNumber = reverseNumber(number);
+
+            // Display the reversed number
+            if (reversedNumber == n)
+                System.out.println("Is a Palindrome Number");
+            else
+                System.out.println("Not a Palindrome Number");
+
+            System.out.println("Reversed number: " + reversedNumber);
+            scanner.close();
+        }
+
+        // Method to reverse the number
+        public static int reverseNumber(int num) {
+            int reversed = 0;
+            while (num != 0) {
+                int digit = num % 10;
+                reversed = reversed * 10 + digit;
+                num /= 10;
+            }
+
+            return reversed;
+        }
+    }
+
+    class pattern_funtion_overloading {
+        public void d() {
+            for (int i = 86; i >= 80; i -= 2) {
+                for (int j = 79; j <= i; j++) {
+                    j++;
+                    System.out.print((char) j);
+                }
+                System.out.println();
+            }
+        }
+
+        public void f() {
+            int a = 97;
+            for (int i = 1; i <= 4; i++) {
+                for (int j = 1; j <= 5; j++) {
+                    System.out.print((char) a + " ");
+                }
+                a++;
+                if (i == 2)
+                    a = 65;
+                System.out.println();
+            }
+        }
+
+        public static void main(String args[]) {
+            pattern_funtion_overloading obj = new pattern_funtion_overloading();
+            obj.d();
+            obj.f();
+        }
+    }
+
+    class Series {
+        public void series(double n) {
+            int x, sum = 0;
+            for (int i = 1; i <= n; i++) {
+                x = 1 / i;
+                sum = sum + x;
+            }
+            System.out.println("The sum of the iterations is " + sum);
+        }
+
+        public void series(double a, double n) {
+            double x, sum = 0.0;
+            for (int i = 2; i <= n; i = i + 3) {
+                x = i - 1 / Math.pow(a, i);
+                sum = sum + x;
+            }
+            System.out.println("The sum of the iterations is " + sum);
+        }
+
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter the value of a and n(number of iterations)");
+            int p = in.nextInt();
+            int q = in.nextInt();
+            Series obj = new Series();
+            obj.series(q);
+            obj.series(p, q);
+        }
+    }
+
+    class Electronic_shop {
+        String name;
+        double price, amt;
+
+        void accept() {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Enter name of item: ");
+            name = in.nextLine();
+            System.out.print("Enter price of item: ");
+            price = in.nextDouble();
+        }
+
+        void calculate() {
+            if (price >= 1000 && price <= 25000)
+                amt = price - (price * 5.0 / 100.0);
+            else if (price >= 25001 && price <= 57000)
+                amt = price - (price * 7.5 / 100.0);
+            else if (price >= 57001 && price <= 100000)
+                amt = price - (price * 10.0 / 100.0);
+            else if (price > 100000)
+                amt = price - (price * 15.0 / 100.0);
+        }
+
+        void display() {
+            System.out.println("Name of item: " + name);
+            System.out.println("Net amount to be paid: " + amt);
+        }
+
+        public static void main(String args[]) {
+            Electronic_shop obj = new Electronic_shop();
+            obj.accept();
+            obj.calculate();
+            obj.display();
+        }
+    }
+
+    class Mobike {
+        int days, charge;
+        long phno, bno;
+        String name;
+
+        void input() {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Enter Customer Name: ");
+            name = in.nextLine();
+            System.out.print("Enter Customer Phone Number: ");
+            phno = in.nextLong();
+            System.out.print("Enter Bike Number: ");
+            bno = in.nextLong();
+            System.out.print("Enter Number of Days: ");
+            days = in.nextInt();
+        }
+
+        void compute() {
+            if (days <= 5)
+                charge = days * 500;
+            else if (days <= 10)
+                charge = (5 * 500) + ((days - 5) * 400);
+            else
+                charge = (5 * 500) + (5 * 400) + ((days - 10) * 200);
+        }
+
+        void display() {
+            System.out.println("Bike No.\tPhone No.\tDays\tCharge");
+            System.out.println(bno + "\t" + phno + "\t" + days + "\t" + charge);
+        }
+
+        public static void main(String args[]) {
+            Mobike obj = new Mobike();
+            obj.input();
+            obj.compute();
+            obj.display();
+        }
+    }
+
+    class Library {
+        String name;
+        int days;
+        double fine;
+
+        Library() {
+            name = "";
+            days = 0;
+            fine = 0.0;
+        }
+
+        void input() {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Name of the book : ");
+            name = in.nextLine();
+            System.out.print("Number of days return late : ");
+            days = in.nextInt();
+        }
+
+        void calculate() {
+            if (days <= 5)
+                fine = days * 0.4;
+            else if (days >= 5 && days <= 10) {
+                days = days - 5;
+                fine = (5 * 0.4) + (days) * 0.6;
+            } else if (days >= 10)
+                days = days - 10;
+            fine = (5 * 0.4) + (5 * 0.6) + (days * 0.8);
+        }
+
+        void printing() {
+            System.out.println("Fine: Rs " + fine);
+        }
+
+        public static void main(String args[]) {
+            Library ob = new Library();
+            ob.input();
+            ob.calculate();
+            ob.printing();
+        }
+    }
+
+    class norm_number {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            int num, digit, prod, sum = 0;
+            double sqrt;
+            System.out.print("Enter number: ");
+            num = in.nextInt();
+            int n = num;
             do {
                 digit = num % 10;
                 num = num / 10;
-                ctr++;
-                if (digit == 0)
-                    ans = 1;
+                prod = digit * digit;
+                sum = sum + prod;
             } while (num > 0);
-            if (ctr == 3) {
-                if (ans == 1)
-                    System.out.println("Is a duck number");
-                else
-                    System.out.println("Is not a duck number");
-            } else
-                System.out.println("Invalid");
-        }
-    }
-}
-
-class function_overloading {
-
-    void display() {
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(j);
-            System.out.println();
+            sqrt = Math.sqrt(sum);
+            System.out.println("The norm number of " + n + " is " + sqrt);
         }
     }
 
-    void display(int n) {
-        int digit;
-        double sqrt;
-        do {
-            digit = n % 10;
-            n = n / 10;
-            sqrt = Math.sqrt(digit);
-            System.out.println(sqrt);
-        } while (n > 0);
-
+    class Amicable_number {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter two numbers:");
+            int num1 = in.nextInt();
+            int num2 = in.nextInt();
+            int sum1 = 0, sum2 = 0;
+            int n1, n2;
+            n1 = num1;
+            n2 = num2;
+            for (int i = 1; i < num1; i++) {
+                if (num1 % i == 0)
+                    sum1 = sum1 + i;
+            }
+            for (int i = 1; i < num2; i++) {
+                if (num2 % i == 0)
+                    sum2 = sum2 + i;
+            }
+            if (sum1 == n2 && sum2 == n1)
+                System.out.println("Is a Amicable number");
+            else
+                System.out.println("Is not a Amicable number");
+        }
     }
 
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        function_overloading obj = new function_overloading();
-        obj.display();
-        System.out.print("Enter Number: ");
-        int number = in.nextInt();
-        obj.display(number);
+    class UniqueNumberChecker {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
 
+            System.out.print("Enter the number: ");
+            int number = scanner.nextInt();
+
+            if (isUniqueNumber(number)) {
+                System.out.println(number + " is a unique number.");
+            } else {
+                System.out.println(number + " is not a unique number.");
+            }
+
+            scanner.close();
+        }
+
+        public static boolean isUniqueNumber(int number) {
+            Set<Integer> digitSet = new HashSet<>();
+
+            while (number > 0) {
+                int digit = number % 10;
+
+                // If the digit is already in the set, it's not unique.
+                if (digitSet.contains(digit)) {
+                    return false;
+                }
+
+                digitSet.add(digit);
+                number /= 10;
+            }
+
+            // If we reached here, all digits are unique.
+            return true;
+        }
     }
-}
 
-class pattern_rect {
-    public static void main(String args[]) {
-        for (int i = 1; i <= 9; i++) {
-            System.out.print(i);
-            if (i % 3 == 0) {
+    class random_pattern1 {
+
+        public static void main(String args[]) {
+            int a = 1;
+            for (int i = 5; i > 0; i--) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(a++ + "\t");
                 System.out.println();
             }
         }
     }
-}
 
-// this program consists of all major patterns for you to choose from
-class desired_pattern {
-
-    // 1
-    // 22
-    // 333
-    // 4444
-    // 55555
-    void pattern1(int rows) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(i);
-            System.out.println();
-        }
-    }
-
-    // 1
-    // 12
-    // 123
-    // 1234
-    // 12345
-    void pattern2(int rows) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(j);
-            System.out.println();
-        }
-    }
-
-    // 11111
-    // 2222
-    // 333
-    // 44
-    // 5
-    void pattern3(int rows) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = rows; j >= i; j--)
-                System.out.print(i);
-            System.out.println();
-        }
-    }
-
-    // 54321
-    // 5432
-    // 543
-    // 54
-    // 5
-    void pattern4(int rows) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = rows; j >= i; j--)
-                System.out.print(j);
-            System.out.println();
-        }
-    }
-
-    // 55555
-    // 4444
-    // 333
-    // 22
-    // 1
-    void pattern5(int rows) {
-        for (int i = rows; i >= 1; i--) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(i);
-            System.out.println();
-        }
-    }
-
-    // 1 1 1 1 1 1 1 1 1 1
-    // 2 2 2 2 2 2 2 2 2 2
-    // 3 3 3 3 3 3 3 3 3 3
-    // 4 4 4 4 4 4 4 4 4 4
-    // 5 5 5 5 5 5 5 5 5 5
-    void pattern6(int rows, int columns) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j <= columns; j++)
-                System.out.print(" " + i + " ");
-            System.out.println();
-        }
-    }
-
-    // 1 2 3 4 5 6 7 8 9 10
-    // 1 2 3 4 5 6 7 8 9 10
-    // 1 2 3 4 5 6 7 8 9 10
-    // 1 2 3 4 5 6 7 8 9 10
-    // 1 2 3 4 5 6 7 8 9 10
-    void pattern7(int rows, int columns) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j <= columns; j++)
-                System.out.print(" " + j + " ");
-            System.out.println();
-        }
-    }
-
-    // 1
-    // 333
-    // 55555
-    // 7777777
-    void pattern8(int rows) {
-        for (int i = 0; i <= rows; i++) {
-            i++;
-            for (int j = 1; j <= i; j++)
-                System.out.print(i);
-            System.out.println();
-        }
-    }
-
-    // 1
-    // 123
-    // 12345
-    // 1234567
-    void pattern9(int rows) {
-        for (int i = 0; i <= rows; i++) {
-            i++;
-            for (int j = 1; j <= i; j++)
-                System.out.print(j);
-            System.out.println();
-        }
-    }
-
-    // A
-    // BB
-    // CCC
-    // DDDD
-    // EEEEE
-    void pattern10(char r) {
-        int rows = (int) r;
-        for (int i = 65; i <= rows; i++) {
-            for (int j = 65; j <= i; j++)
-                System.out.print((char) i);
-            System.out.println();
-        }
-    }
-
-    // A
-    // AB
-    // ABC
-    // ABCD
-    // ABCDE
-    void pattern11(char r) {
-        int rows = (int) r;
-        for (int i = 65; i <= rows; i++) {
-            for (int j = 65; j <= i; j++)
-                System.out.print((char) j);
-            System.out.println();
-        }
-    }
-
-    // a
-    // bb
-    // ccc
-    // dddd
-    // eeeee
-    void pattern12(char r) {
-        int rows = (int) r;
-        for (int i = 97; i <= rows; i++) {
-            for (int j = 97; j <= i; j++)
-                System.out.print((char) i);
-            System.out.println();
-        }
-    }
-
-    // a
-    // ab
-    // abc
-    // abcd
-    // abcde
-    void pattern13(char r) {
-        int rows = (int) r;
-        for (int i = 97; i <= rows; i++) {
-            for (int j = 97; j <= i; j++)
-                System.out.print((char) j);
-            System.out.println();
-        }
-    }
-
-    // 12345
-    // 1234
-    // 123
-    // 12
-    // 1
-    void pattern14(int rows) {
-        for (int i = rows; i >= 1; i--) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(j);
-            System.out.println();
-        }
-    }
-
-    // 13579
-    // 1357
-    // 135
-    // 13
-    // 1
-    void pattern15(int rows) {
-        for (int i = rows; i >= 1; i--) {
-            i--;
-            for (int j = 0; j <= i; j++) {
-                j++;
-                System.out.print(j);
-            }
-            System.out.println();
-        }
-    }
-
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        desired_pattern obj = new desired_pattern();
-        int rows;
-        int columns;
-        char r;
-
-        System.out.println("Select desired type of pattern:-");
-
-        System.out.println("a]");
-        System.out.println("1\r\n" + //
-                "22\r\n" + //
-                "333\r\n" + //
-                "4444\r\n" + //
-                "55555");
-
-        System.out.println("");
-
-        System.out.println("b]");
-        System.out.println("1\r\n" + //
-                "12\r\n" + //
-                "123\r\n" + //
-                "1234\r\n" + //
-                "12345");
-
-        System.out.println("");
-
-        System.out.println("c]");
-        System.out.println("11111\r\n" + //
-                "2222\r\n" + //
-                "333\r\n" + //
-                "44\r\n" + //
-                "5");
-
-        System.out.println("");
-
-        System.out.println("d]");
-        System.out.println("54321\r\n" + //
-                "5432\r\n" + //
-                "543\r\n" + //
-                "54\r\n" + //
-                "5");
-
-        System.out.println("");
-
-        System.out.println("e]");
-        System.out.println("55555\r\n" + //
-                "4444\r\n" + //
-                "333\r\n" + //
-                "22\r\n" + //
-                "1");
-
-        System.out.println("");
-
-        System.out.println("f]");
-        System.out.println(" 1  1  1  1  1  1  1  1  1  1 \r\n" + //
-                " 2  2  2  2  2  2  2  2  2  2 \r\n" + //
-                " 3  3  3  3  3  3  3  3  3  3\r\n" + //
-                " 4  4  4  4  4  4  4  4  4  4\r\n" + //
-                " 5  5  5  5  5  5  5  5  5  5");
-
-        System.out.println("");
-
-        System.out.println("g]");
-        System.out.println(" 1  2  3  4  5  6  7  8  9  10 \r\n" + //
-                " 1  2  3  4  5  6  7  8  9  10 \r\n" + //
-                " 1  2  3  4  5  6  7  8  9  10\r\n" + //
-                " 1  2  3  4  5  6  7  8  9  10\r\n" + //
-                " 1  2  3  4  5  6  7  8  9  10");
-
-        System.out.println("");
-
-        System.out.println("h]");
-        System.out.println("1\r\n" + //
-                "333\r\n" + //
-                "55555\r\n" + //
-                "7777777");
-
-        System.out.println("");
-
-        System.out.println("i]");
-        System.out.println("1\r\n" + //
-                "123\r\n" + //
-                "12345\r\n" + //
-                "1234567");
-
-        System.out.println("");
-
-        System.out.println("j]");
-        System.out.println("A\r\n" + //
-                "BB\r\n" + //
-                "CCC\r\n" + //
-                "DDDD\r\n" + //
-                "EEEEE");
-
-        System.out.println("");
-
-        System.out.println("k]");
-        System.out.println("A    \r\n" + //
-                "AB   \r\n" + //
-                "ABC  \r\n" + //
-                "ABCD \r\n" + //
-                "ABCDE");
-
-        System.out.println("");
-
-        System.out.println("l]");
-        System.out.println("a    \r\n" + //
-                "bb   \r\n" + //
-                "ccc  \r\n" + //
-                "dddd \r\n" + //
-                "eeeee");
-
-        System.out.println("");
-
-        System.out.println("m]");
-        System.out.println("a    \r\n" + //
-                "ab   \r\n" + //
-                "abc  \r\n" + //
-                "abcd \r\n" + //
-                "abcde");
-
-        System.out.println("");
-
-        System.out.println("n]");
-        System.out.println("12345\r\n" + //
-                "1234\r\n" + //
-                "123\r\n" + //
-                "12\r\n" + //
-                "1");
-
-        System.out.println("");
-
-        System.out.println("o]");
-        System.out.println("13579\r\n" + //
-                "1357\r\n" + //
-                "135\r\n" + //
-                "13\r\n" + //
-                "1");
-
-        System.out.println("");
-        System.out.print("Which pattern(only enter letter):- ");
-        char choice = in.next().charAt(0);
-        switch (choice) {
-            case 'a':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern1(rows);
-                break;
-
-            case 'b':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern2(rows);
-                break;
-
-            case 'c':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern3(rows);
-                break;
-
-            case 'd':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern4(rows);
-                break;
-
-            case 'e':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern5(rows);
-                break;
-
-            case 'f':
-                System.out.print("Enter rows: ");
-                rows = in.nextInt();
-                System.out.print("Enter columns: ");
-                columns = in.nextInt();
-                obj.pattern6(rows, columns);
-                break;
-
-            case 'g':
-                System.out.print("Enter rows: ");
-                rows = in.nextInt();
-                System.out.print("Enter columns: ");
-                columns = in.nextInt();
-                obj.pattern7(rows, columns);
-                break;
-
-            case 'h':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern8(rows);
-                break;
-
-            case 'i':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern9(rows);
-                break;
-
-            case 'j':
-                System.out.print("Enter letter: ");
-                r = in.next().charAt(0);
-                obj.pattern10(r);
-                break;
-
-            case 'k':
-                System.out.print("Enter letter: ");
-                r = in.next().charAt(0);
-                obj.pattern11(r);
-                break;
-
-            case 'l':
-                System.out.print("Enter letter: ");
-                r = in.next().charAt(0);
-                obj.pattern12(r);
-                break;
-
-            case 'm':
-                System.out.print("Enter letter: ");
-                r = in.next().charAt(0);
-                obj.pattern13(r);
-                break;
-
-            case 'n':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern14(rows);
-                break;
-
-            case 'o':
-                System.out.print("Enter number: ");
-                rows = in.nextInt();
-                obj.pattern15(rows);
-                break;
-
-            default:
-                System.out.println("Invalid Input");
-                break;
-        }
-    }
-}
-
-// this program will help you find the middle term of the number..lets say you
-// input some very large number like
-// 2342412342142421342341231313131231321312, it would print the middle digit of
-// the number
-
-class middle_digit {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter number : ");
-        long num1 = in.nextLong();
-        long num = num1;
-        long digit, dig;
-        int ctr = 0, ctr1 = 0;
-        double mid;
-        int term_no = 0;
-        do {
-            digit = num1 % 10;
-            num1 = num1 / 10;
-            ctr++;
-        } while (num1 > 0);
-        if (ctr % 2 == 0) {
-            System.out.println(
-                    "Since your number has even number of digits, printing the number at the halfth term of the number of terms +1 .....eg(1023)-->2");
-            mid = ctr / 2.0;
-            term_no = (int) (mid);
-        } else if (ctr % 2 != 0) {
-            mid = Math.ceil(ctr / 2.0);
-            term_no = (int) (mid);
-        }
-        do {
-            dig = num % 10;
-            num = num / 10;
-            ctr1++;
-            if (ctr1 == term_no)
-                System.out.println("The middle digit of the number you inputed is :- " + dig);
-        } while (num > 0);
-    }
-}
-
-class Palindrome {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Prompt the user to enter a number
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-        int n = number;
-
-        // Call the reverseNumber method to reverse the number
-        int reversedNumber = reverseNumber(number);
-
-        // Display the reversed number
-        if (reversedNumber == n)
-            System.out.println("Is a Palindrome Number");
-        else
-            System.out.println("Not a Palindrome Number");
-
-        System.out.println("Reversed number: " + reversedNumber);
-        scanner.close();
-    }
-
-    // Method to reverse the number
-    public static int reverseNumber(int num) {
-        int reversed = 0;
-        while (num != 0) {
-            int digit = num % 10;
-            reversed = reversed * 10 + digit;
-            num /= 10;
-        }
-
-        return reversed;
-    }
-}
-
-class pattern_funtion_overloading {
-    public void d() {
-        for (int i = 86; i >= 80; i -= 2) {
-            for (int j = 79; j <= i; j++) {
-                j++;
-                System.out.print((char) j);
-            }
-            System.out.println();
-        }
-    }
-
-    public void f() {
-        int a = 97;
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= 5; j++) {
-                System.out.print((char) a + " ");
-            }
-            a++;
-            if (i == 2)
-                a = 65;
-            System.out.println();
-        }
-    }
-
-    public static void main(String args[]) {
-        pattern_funtion_overloading obj = new pattern_funtion_overloading();
-        obj.d();
-        obj.f();
-    }
-}
-
-class Series {
-    public void series(double n) {
-        int x, sum = 0;
-        for (int i = 1; i <= n; i++) {
-            x = 1 / i;
-            sum = sum + x;
-        }
-        System.out.println("The sum of the iterations is " + sum);
-    }
-
-    public void series(double a, double n) {
-        double x, sum = 0.0;
-        for (int i = 2; i <= n; i = i + 3) {
-            x = i - 1 / Math.pow(a, i);
-            sum = sum + x;
-        }
-        System.out.println("The sum of the iterations is " + sum);
-    }
-
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the value of a and n(number of iterations)");
-        int p = in.nextInt();
-        int q = in.nextInt();
-        Series obj = new Series();
-        obj.series(q);
-        obj.series(p, q);
-    }
-}
-
-class Electronic_shop {
-    String name;
-    double price, amt;
-
-    void accept() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter name of item: ");
-        name = in.nextLine();
-        System.out.print("Enter price of item: ");
-        price = in.nextDouble();
-    }
-
-    void calculate() {
-        if (price >= 1000 && price <= 25000)
-            amt = price - (price * 5.0 / 100.0);
-        else if (price >= 25001 && price <= 57000)
-            amt = price - (price * 7.5 / 100.0);
-        else if (price >= 57001 && price <= 100000)
-            amt = price - (price * 10.0 / 100.0);
-        else if (price > 100000)
-            amt = price - (price * 15.0 / 100.0);
-    }
-
-    void display() {
-        System.out.println("Name of item: " + name);
-        System.out.println("Net amount to be paid: " + amt);
-    }
-
-    public static void main(String args[]) {
-        Electronic_shop obj = new Electronic_shop();
-        obj.accept();
-        obj.calculate();
-        obj.display();
-    }
-}
-
-class Mobike {
-    int days, charge;
-    long phno, bno;
-    String name;
-
-    void input() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter Customer Name: ");
-        name = in.nextLine();
-        System.out.print("Enter Customer Phone Number: ");
-        phno = in.nextLong();
-        System.out.print("Enter Bike Number: ");
-        bno = in.nextLong();
-        System.out.print("Enter Number of Days: ");
-        days = in.nextInt();
-    }
-
-    void compute() {
-        if (days <= 5)
-            charge = days * 500;
-        else if (days <= 10)
-            charge = (5 * 500) + ((days - 5) * 400);
-        else
-            charge = (5 * 500) + (5 * 400) + ((days - 10) * 200);
-    }
-
-    void display() {
-        System.out.println("Bike No.\tPhone No.\tDays\tCharge");
-        System.out.println(bno + "\t" + phno + "\t" + days + "\t" + charge);
-    }
-
-    public static void main(String args[]) {
-        Mobike obj = new Mobike();
-        obj.input();
-        obj.compute();
-        obj.display();
-    }
-}
-
-class Library {
-    String name;
-    int days;
-    double fine;
-
-    Library() {
-        name = "";
-        days = 0;
-        fine = 0.0;
-    }
-
-    void input() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Name of the book : ");
-        name = in.nextLine();
-        System.out.print("Number of days return late : ");
-        days = in.nextInt();
-    }
-
-    void calculate() {
-        if (days <= 5)
-            fine = days * 0.4;
-        else if (days >= 5 && days <= 10) {
-            days = days - 5;
-            fine = (5 * 0.4) + (days) * 0.6;
-        } else if (days >= 10)
-            days = days - 10;
-        fine = (5 * 0.4) + (5 * 0.6) + (days * 0.8);
-    }
-
-    void printing() {
-        System.out.println("Fine: Rs " + fine);
-    }
-
-    public static void main(String args[]) {
-        Library ob = new Library();
-        ob.input();
-        ob.calculate();
-        ob.printing();
-    }
-}
-
-class norm_number {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        int num, digit, prod, sum = 0;
-        double sqrt;
-        System.out.print("Enter number: ");
-        num = in.nextInt();
-        int n = num;
-        do {
-            digit = num % 10;
-            num = num / 10;
-            prod = digit * digit;
-            sum = sum + prod;
-        } while (num > 0);
-        sqrt = Math.sqrt(sum);
-        System.out.println("The norm number of " + n + " is " + sqrt);
-    }
-}
-
-class Amicable_number {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter two numbers:");
-        int num1 = in.nextInt();
-        int num2 = in.nextInt();
-        int sum1 = 0, sum2 = 0;
-        int n1, n2;
-        n1 = num1;
-        n2 = num2;
-        for (int i = 1; i < num1; i++) {
-            if (num1 % i == 0)
-                sum1 = sum1 + i;
-        }
-        for (int i = 1; i < num2; i++) {
-            if (num2 % i == 0)
-                sum2 = sum2 + i;
-        }
-        if (sum1 == n2 && sum2 == n1)
-            System.out.println("Is a Amicable number");
-        else
-            System.out.println("Is not a Amicable number");
-    }
-}
-
-class UniqueNumberChecker {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter the number: ");
-        int number = scanner.nextInt();
-
-        if (isUniqueNumber(number)) {
-            System.out.println(number + " is a unique number.");
-        } else {
-            System.out.println(number + " is not a unique number.");
-        }
-
-        scanner.close();
-    }
-
-    public static boolean isUniqueNumber(int number) {
-        Set<Integer> digitSet = new HashSet<>();
-
-        while (number > 0) {
-            int digit = number % 10;
-
-            // If the digit is already in the set, it's not unique.
-            if (digitSet.contains(digit)) {
-                return false;
-            }
-
-            digitSet.add(digit);
-            number /= 10;
-        }
-
-        // If we reached here, all digits are unique.
-        return true;
-    }
-}
-
-class random_pattern1 {
-
-    public static void main(String args[]) {
-        int a = 1;
-        for (int i = 5; i > 0; i--) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(a++ + "\t");
-            System.out.println();
-        }
-    }
-}
-
-class random_pattern2 {
-
-    public static void main(String args[]) {
-        int a = 1;
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 5; j >= i; j--)
-                System.out.print(a++ + "\t");
-            System.out.println();
-        }
-    }
-}
-
-class random_pattern3 {
-    public static void main(String args[]) {
-        int a = 1, b = 0;
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= i; j++) {
-                if (j % 2 == 0)
-                    System.out.print(b + " ");
-                else
-                    System.out.print(a + " ");
-            }
-            System.out.println();
-        }
-    }
-}
-
-class random_pattern4 {
-    public static void main(String args[]) {
-        int a = 1;
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= i; j++)
-                System.out.print(a++ + "\t");
-            System.out.println();
-        }
-
-    }
-}
-
-class acsii_code {
-    public static void main(String args[]) {
-        char ch;
-        System.out.println("ACSII CODE" + "\t" + "CHARACTER");
-        for (int i = 0; i <= 255; i++) {
-            ch = (char) i;
-            System.out.println(i + "\t" + "\t" + ch);
-        }
-    }
-}
-
-class join_numbers {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter two numbers");
-        int num1 = in.nextInt();
-        int num2 = in.nextInt();
-        String str1 = Integer.toString(num1);
-        String str2 = Integer.toString(num2);
-        String str = str1 + str2;
-        int num = Integer.parseInt(str);
-        System.out.println(num);
-    }
-}
-
-class arrays_linear_search {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter array size");
-        int s = in.nextInt();
-        int a[] = new int[s];
-        System.out.println("Enter elements of the array");
-        for (int i = 0; i < s; i++) {
-            a[i] = in.nextInt();
-        }
-        System.out.println("Enter number to search");
-        int n = in.nextInt();
-        int pos = 0;
-        boolean found = false;
-        for (int j = 0; j < s; j++) {
-            if (a[j] == n) {
-                found = true;
-                pos = j;
-                break;
+    class random_pattern2 {
+
+        public static void main(String args[]) {
+            int a = 1;
+            for (int i = 1; i <= 5; i++) {
+                for (int j = 5; j >= i; j--)
+                    System.out.print(a++ + "\t");
+                System.out.println();
             }
         }
-        if (found == true)
-            System.out.println("Number is present at " + (pos + 1) + "th position");
-        else
-            System.out.println("Number not present in the array");
     }
 
-}
-
-class arrays_binary_search {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter array size");
-        int s = in.nextInt();
-        int a[] = new int[s];
-        System.out.println("Enter elements of the array");
-        for (int i = 0; i < s; i++) {
-            a[i] = in.nextInt();
-        }
-        Arrays.sort(a);
-        System.out.println("Enter number to search");
-        int n = in.nextInt();
-        int low = 0;
-        int high = a.length - 1;
-        int mid, pos = -1;
-        while (low <= high) {
-            mid = (high + low) / 2;
-            if (n == a[mid]) {
-                pos = mid;
-                break;
-            } else if (n > a[mid])
-                low = mid + 1;
-            else
-                high = mid - 1;
-        }
-        if (pos == -1)
-            System.out.println("Number not present in the sorted array");
-        else {
-            System.out.println("Number is present at " + (pos + 1) + "th position");
-        }
-    }
-}
-
-class arrays_jaidev {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the number of elements");
-        int n = in.nextInt();
-        int x[] = new int[n];
-        System.out.println("Enter the elements for each position");
-        for (int i = 0; i < n; i++) {
-            int w = in.nextInt();
-            x[i] = w;
-        }
-        Arrays.sort(x);
-        int s = 0, e = n - 1;
-        int pos = -1;
-        System.out.println("Enter Number");
-        int o = in.nextInt();
-        int mid = (s + e) / 2;
-
-        while (s <= e) {
-            if (o == x[mid]) {
-                pos = mid;
-                break;
-            } else if (o < x[mid]) {
-                e = mid - 1;
-            } else {
-                s = mid + 1;
+    class random_pattern3 {
+        public static void main(String args[]) {
+            int a = 1, b = 0;
+            for (int i = 1; i <= 5; i++) {
+                for (int j = 1; j <= i; j++) {
+                    if (j % 2 == 0)
+                        System.out.print(b + " ");
+                    else
+                        System.out.print(a + " ");
+                }
+                System.out.println();
             }
         }
-        if (pos == -1)
-            System.out.println("Element not found");
-        else
-            System.out.println("Element found at " + (pos + 1));
     }
-}
 
-class arrays_insertion {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the length of array");
-        int x = in.nextInt();
-        int a[] = new int[x];
-        System.out.println("Enter the amount of numbers you will enter");
-        int size = in.nextInt();
-        System.out.println("Enter " + size + " numbers");
-        for (int i = 0; i < size; i++)
-            a[i] = in.nextInt();
-        // printing the array before insertion
-        System.out.println("\nArray Before Insertion: ");
-        for (int b = 0; b < size; b++)
-            System.out.print(a[b] + ", ");
-        // Insertion sort algorithm
-        System.out
-                .println("Enter the number to enter and the index number in the array to be inserted at respectively");
-        int n = in.nextInt();
-        int pos = in.nextInt();
-        for (int j = size; j > pos; j--) {
-            a[j] = a[j - 1];
+    class random_pattern4 {
+        public static void main(String args[]) {
+            int a = 1;
+            for (int i = 1; i <= 5; i++) {
+                for (int j = 1; j <= i; j++)
+                    System.out.print(a++ + "\t");
+                System.out.println();
+            }
+
         }
-        a[pos] = n;
-        ++size;
-        // printing the array after insertion
-        System.out.println("\nArray After Insertion: ");
-        for (int c = 0; c < size; c++)
-            System.out.print(a[c] + ", ");
-
     }
-}
 
-class arrays_deletion {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the length of array");
-        int x = in.nextInt();
-        int a[] = new int[x];
-        System.out.println("Enter the amount of numbers you will enter");
-        int size = in.nextInt();
-        System.out.println("Enter " + size + " numbers");
-        for (int i = 0; i < size; i++)
-            a[i] = in.nextInt();
-        // printing the array before deleting
-        System.out.println("\nArray Before deleting: ");
-        for (int b = 0; b < size; b++)
-            System.out.print(a[b] + ", ");
-        // Insertion sort algorithm
-        System.out.println("\nEnter the index number in the array to be inserted at respectively");
-        int pos = in.nextInt();
-        for (int j = pos; j < size; j++) {
-            a[j] = a[j + 1];
+    class acsii_code {
+        public static void main(String args[]) {
+            char ch;
+            System.out.println("ACSII CODE" + "\t" + "CHARACTER");
+            for (int i = 0; i <= 255; i++) {
+                ch = (char) i;
+                System.out.println(i + "\t" + "\t" + ch);
+            }
         }
-        --size;
-        // printing the array after insertion
-        System.out.println("\nArray After Deletion: ");
-        for (int c = 0; c < size; c++)
-            System.out.print(a[c] + ", ");
-
     }
-}
 
-class arrays_bubblesort {
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter array size");
-        int x = in.nextInt();
-        int a[] = new int[x];
-        System.out.println("Enter elements of the array");
-        for (int i = 0; i < a.length; i++)
-            a[i] = in.nextInt();
-        // bubble sort
-        for (int i = 0; i < a.length - 1; i++) {
-            for (int j = 0; j < a.length - i - 1; j++) {
-                if (a[j] > a[j + 1]) {
-                    int z = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = z;
+    class join_numbers {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter two numbers");
+            int num1 = in.nextInt();
+            int num2 = in.nextInt();
+            String str1 = Integer.toString(num1);
+            String str2 = Integer.toString(num2);
+            String str = str1 + str2;
+            int num = Integer.parseInt(str);
+            System.out.println(num);
+        }
+    }
+
+    class arrays_linear_search {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter array size");
+            int s = in.nextInt();
+            int a[] = new int[s];
+            System.out.println("Enter elements of the array");
+            for (int i = 0; i < s; i++) {
+                a[i] = in.nextInt();
+            }
+            System.out.println("Enter number to search");
+            int n = in.nextInt();
+            int pos = 0;
+            boolean found = false;
+            for (int j = 0; j < s; j++) {
+                if (a[j] == n) {
+                    found = true;
+                    pos = j;
+                    break;
                 }
             }
+            if (found == true)
+                System.out.println("Number is present at " + (pos + 1) + "th position");
+            else
+                System.out.println("Number not present in the array");
         }
-        // printing sorted array
-        for (int c = 0; c < a.length; c++)
-            System.out.print(a[c] + ", ");
 
     }
-}
+
+    class arrays_binary_search {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter array size");
+            int s = in.nextInt();
+            int a[] = new int[s];
+            System.out.println("Enter elements of the array");
+            for (int i = 0; i < s; i++) {
+                a[i] = in.nextInt();
+            }
+            Arrays.sort(a);
+            System.out.println("Enter number to search");
+            int n = in.nextInt();
+            int low = 0;
+            int high = a.length - 1;
+            int mid, pos = -1;
+            while (low <= high) {
+                mid = (high + low) / 2;
+                if (n == a[mid]) {
+                    pos = mid;
+                    break;
+                } else if (n > a[mid])
+                    low = mid + 1;
+                else
+                    high = mid - 1;
+            }
+            if (pos == -1)
+                System.out.println("Number not present in the sorted array");
+            else {
+                System.out.println("Number is present at " + (pos + 1) + "th position");
+            }
+        }
+    }
+
+    class arrays_jaidev {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter the number of elements");
+            int n = in.nextInt();
+            int x[] = new int[n];
+            System.out.println("Enter the elements for each position");
+            for (int i = 0; i < n; i++) {
+                int w = in.nextInt();
+                x[i] = w;
+            }
+            Arrays.sort(x);
+            int s = 0, e = n - 1;
+            int pos = -1;
+            System.out.println("Enter Number");
+            int o = in.nextInt();
+            int mid = (s + e) / 2;
+
+            while (s <= e) {
+                if (o == x[mid]) {
+                    pos = mid;
+                    break;
+                } else if (o < x[mid]) {
+                    e = mid - 1;
+                } else {
+                    s = mid + 1;
+                }
+            }
+            if (pos == -1)
+                System.out.println("Element not found");
+            else
+                System.out.println("Element found at " + (pos + 1));
+        }
+    }
+
+    class arrays_insertion {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter the length of array");
+            int x = in.nextInt();
+            int a[] = new int[x];
+            System.out.println("Enter the amount of numbers you will enter");
+            int size = in.nextInt();
+            System.out.println("Enter " + size + " numbers");
+            for (int i = 0; i < size; i++)
+                a[i] = in.nextInt();
+            // printing the array before insertion
+            System.out.println("\nArray Before Insertion: ");
+            for (int b = 0; b < size; b++)
+                System.out.print(a[b] + ", ");
+            // Insertion sort algorithm
+            System.out
+                    .println(
+                            "Enter the number to enter and the index number in the array to be inserted at respectively");
+            int n = in.nextInt();
+            int pos = in.nextInt();
+            for (int j = size; j > pos; j--) {
+                a[j] = a[j - 1];
+            }
+            a[pos] = n;
+            ++size;
+            // printing the array after insertion
+            System.out.println("\nArray After Insertion: ");
+            for (int c = 0; c < size; c++)
+                System.out.print(a[c] + ", ");
+
+        }
+    }
+
+    class arrays_deletion {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter the length of array");
+            int x = in.nextInt();
+            int a[] = new int[x];
+            System.out.println("Enter the amount of numbers you will enter");
+            int size = in.nextInt();
+            System.out.println("Enter " + size + " numbers");
+            for (int i = 0; i < size; i++)
+                a[i] = in.nextInt();
+            // printing the array before deleting
+            System.out.println("\nArray Before deleting: ");
+            for (int b = 0; b < size; b++)
+                System.out.print(a[b] + ", ");
+            // Insertion sort algorithm
+            System.out.println("\nEnter the index number in the array to be inserted at respectively");
+            int pos = in.nextInt();
+            for (int j = pos; j < size; j++) {
+                a[j] = a[j + 1];
+            }
+            --size;
+            // printing the array after insertion
+            System.out.println("\nArray After Deletion: ");
+            for (int c = 0; c < size; c++)
+                System.out.print(a[c] + ", ");
+
+        }
+    }
+
+    class arrays_bubblesort {
+        public static void main(String args[]) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter array size");
+            int x = in.nextInt();
+            int a[] = new int[x];
+            System.out.println("Enter elements of the array");
+            for (int i = 0; i < a.length; i++)
+                a[i] = in.nextInt();
+            // bubble sort
+            for (int i = 0; i < a.length - 1; i++) {
+                for (int j = 0; j < a.length - i - 1; j++) {
+                    if (a[j] > a[j + 1]) {
+                        //swap
+                        int z = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = z;
+                    }
+                }
+            }
+            // printing sorted array
+            for (int c = 0; c < a.length; c++)
+                System.out.print(a[c] + ", ");
+
+        }
+    }
 
 class arrays_selectionsort {
     public static void main(String args[]) {
@@ -2619,7 +2664,7 @@ class arrays_selectionsort {
         System.out.println("Enter elements of the array");
         for (int i = 0; i < arr.length; i++)
             arr[i] = in.nextInt();
-            // selection sort algorithm
+        // selection sort algorithm
         for (int i = 0; i < arr.length - 1; i++) {
             int smallest = i;
             for (int j = i + 1; j < arr.length; j++) {
@@ -2637,4 +2682,3 @@ class arrays_selectionsort {
 
     }
 }
-

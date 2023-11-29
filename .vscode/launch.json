@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "question8_2023",
+            "request": "launch",
+            "mainClass": "question8_2023",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "question7_2023",
+            "request": "launch",
+            "mainClass": "question7_2023",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "desired_pattern",
             "request": "launch",
             "mainClass": "desired_pattern",
