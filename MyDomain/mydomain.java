@@ -1,6 +1,4 @@
-import java.util.Scanner;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 class odd_even {
     public static void main(String args[]) {
@@ -1002,14 +1000,14 @@ class calculator // asks user to input two numbers and what operation to perform
                     System.out.println("Enter degree in celsius");
                     c = in.nextDouble();
                     f = (c) * (9.0 / 5.0) + (32.0);
-                    System.out.println(c + "°c in farenheit is " + f + "°f");
+                    System.out.println(c + "ï¿½c in farenheit is " + f + "ï¿½f");
                     break;
                 case 2:
                     System.out.println("You chose Farenheit -----> Celsius");
                     System.out.println("Enter degree in farenheit");
                     f = in.nextDouble();
                     c = ((f) - (32.0)) * (5.0 / 9.0);
-                    System.out.println(f + "°f in celsius is " + c + "°c");
+                    System.out.println(f + "ï¿½f in celsius is " + c + "ï¿½c");
                     break;
             }
         }
@@ -1171,9 +1169,9 @@ class calculator // asks user to input two numbers and what operation to perform
      * on the
      * following criteria:
      * Price Discount
-     * 1000 – 25000 5.0%
-     * 25001 – 57000 7.5 %
-     * 57001 – 100000 10.0%
+     * 1000 ï¿½ 25000 5.0%
+     * 25001 ï¿½ 57000 7.5 %
+     * 57001 ï¿½ 100000 10.0%
      * More than 100000 15.0 %
      * void display(): To display the name of the item and the net amount to be
      * paid.
@@ -1316,20 +1314,20 @@ class isvowel {
  * Question 1
  * Design a class with the following specifications:
  * Class name: Student
- * Member variables: name – name of student
- * age – age of student
- * mks –marks obtained
- * stream – stream allocated
+ * Member variables: name ï¿½ name of student
+ * age ï¿½ age of student
+ * mks ï¿½marks obtained
+ * stream ï¿½ stream allocated
  * (Declare the variables using appropriate data types)
  * Member methods:
- * void accept() – Accept name, age and marks using methods of Scanner class.
- * void allocation() – Allocate the stream as per following criteria:
+ * void accept() ï¿½ Accept name, age and marks using methods of Scanner class.
+ * void allocation() ï¿½ Allocate the stream as per following criteria:
  * mks stream
  * > = 300 Science and Computer
  * > = 200 and < 300 Commerce and Computer
  * > = 75 and 200 Arts and Animation
  * < 75 Try Again
- * void print() – Display student name, age, mks and stream allocated.
+ * void print() ï¿½ Display student name, age, mks and stream allocated.
  * Call all the above methods in main method using an object.
  **/
 
@@ -1445,10 +1443,10 @@ class question3_2023 {
  * Define a class to accept a String and print the number of digits, alphabets
  * and special
  * characters in the string.
- * Example: S = “KAPILDEV@83”
- * Output: Number of digits – 2
- * Number of Alphabets – 8
- * Number of Special characters – 1
+ * Example: S = ï¿½KAPILDEV@83ï¿½
+ * Output: Number of digits ï¿½ 2
+ * Number of Alphabets ï¿½ 8
+ * Number of Special characters ï¿½ 1
  **/
 
 /**
@@ -1457,9 +1455,9 @@ class question3_2023 {
  * Accept a double
  * value from user and search in the array using linear search method. If value
  * is found
- * display message “Found” with its position where it is present in the array.
+ * display message ï¿½Foundï¿½ with its position where it is present in the array.
  * Otherwise
- * display message “not found”.
+ * display message ï¿½not foundï¿½.
  **/
 
 /**
@@ -2348,3 +2346,295 @@ class UniqueNumberChecker {
         return true;
     }
 }
+
+class random_pattern1 {
+
+    public static void main(String args[]) {
+        int a = 1;
+        for (int i = 5; i > 0; i--) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(a++ + "\t");
+            System.out.println();
+        }
+    }
+}
+
+class random_pattern2 {
+
+    public static void main(String args[]) {
+        int a = 1;
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 5; j >= i; j--)
+                System.out.print(a++ + "\t");
+            System.out.println();
+        }
+    }
+}
+
+class random_pattern3 {
+    public static void main(String args[]) {
+        int a = 1, b = 0;
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j % 2 == 0)
+                    System.out.print(b + " ");
+                else
+                    System.out.print(a + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class random_pattern4 {
+    public static void main(String args[]) {
+        int a = 1;
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(a++ + "\t");
+            System.out.println();
+        }
+
+    }
+}
+
+class acsii_code {
+    public static void main(String args[]) {
+        char ch;
+        System.out.println("ACSII CODE" + "\t" + "CHARACTER");
+        for (int i = 0; i <= 255; i++) {
+            ch = (char) i;
+            System.out.println(i + "\t" + "\t" + ch);
+        }
+    }
+}
+
+class join_numbers {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter two numbers");
+        int num1 = in.nextInt();
+        int num2 = in.nextInt();
+        String str1 = Integer.toString(num1);
+        String str2 = Integer.toString(num2);
+        String str = str1 + str2;
+        int num = Integer.parseInt(str);
+        System.out.println(num);
+    }
+}
+
+class arrays_linear_search {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter array size");
+        int s = in.nextInt();
+        int a[] = new int[s];
+        System.out.println("Enter elements of the array");
+        for (int i = 0; i < s; i++) {
+            a[i] = in.nextInt();
+        }
+        System.out.println("Enter number to search");
+        int n = in.nextInt();
+        int pos = 0;
+        boolean found = false;
+        for (int j = 0; j < s; j++) {
+            if (a[j] == n) {
+                found = true;
+                pos = j;
+                break;
+            }
+        }
+        if (found == true)
+            System.out.println("Number is present at " + (pos + 1) + "th position");
+        else
+            System.out.println("Number not present in the array");
+    }
+
+}
+
+class arrays_binary_search {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter array size");
+        int s = in.nextInt();
+        int a[] = new int[s];
+        System.out.println("Enter elements of the array");
+        for (int i = 0; i < s; i++) {
+            a[i] = in.nextInt();
+        }
+        Arrays.sort(a);
+        System.out.println("Enter number to search");
+        int n = in.nextInt();
+        int low = 0;
+        int high = a.length - 1;
+        int mid, pos = -1;
+        while (low <= high) {
+            mid = (high + low) / 2;
+            if (n == a[mid]) {
+                pos = mid;
+                break;
+            } else if (n > a[mid])
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        if (pos == -1)
+            System.out.println("Number not present in the sorted array");
+        else {
+            System.out.println("Number is present at " + (pos + 1) + "th position");
+        }
+    }
+}
+
+class arrays_jaidev {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of elements");
+        int n = in.nextInt();
+        int x[] = new int[n];
+        System.out.println("Enter the elements for each position");
+        for (int i = 0; i < n; i++) {
+            int w = in.nextInt();
+            x[i] = w;
+        }
+        Arrays.sort(x);
+        int s = 0, e = n - 1;
+        int pos = -1;
+        System.out.println("Enter Number");
+        int o = in.nextInt();
+        int mid = (s + e) / 2;
+
+        while (s <= e) {
+            if (o == x[mid]) {
+                pos = mid;
+                break;
+            } else if (o < x[mid]) {
+                e = mid - 1;
+            } else {
+                s = mid + 1;
+            }
+        }
+        if (pos == -1)
+            System.out.println("Element not found");
+        else
+            System.out.println("Element found at " + (pos + 1));
+    }
+}
+
+class arrays_insertion {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the length of array");
+        int x = in.nextInt();
+        int a[] = new int[x];
+        System.out.println("Enter the amount of numbers you will enter");
+        int size = in.nextInt();
+        System.out.println("Enter " + size + " numbers");
+        for (int i = 0; i < size; i++)
+            a[i] = in.nextInt();
+        // printing the array before insertion
+        System.out.println("\nArray Before Insertion: ");
+        for (int b = 0; b < size; b++)
+            System.out.print(a[b] + ", ");
+        // Insertion sort algorithm
+        System.out
+                .println("Enter the number to enter and the index number in the array to be inserted at respectively");
+        int n = in.nextInt();
+        int pos = in.nextInt();
+        for (int j = size; j > pos; j--) {
+            a[j] = a[j - 1];
+        }
+        a[pos] = n;
+        ++size;
+        // printing the array after insertion
+        System.out.println("\nArray After Insertion: ");
+        for (int c = 0; c < size; c++)
+            System.out.print(a[c] + ", ");
+
+    }
+}
+
+class arrays_deletion {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the length of array");
+        int x = in.nextInt();
+        int a[] = new int[x];
+        System.out.println("Enter the amount of numbers you will enter");
+        int size = in.nextInt();
+        System.out.println("Enter " + size + " numbers");
+        for (int i = 0; i < size; i++)
+            a[i] = in.nextInt();
+        // printing the array before deleting
+        System.out.println("\nArray Before deleting: ");
+        for (int b = 0; b < size; b++)
+            System.out.print(a[b] + ", ");
+        // Insertion sort algorithm
+        System.out.println("\nEnter the index number in the array to be inserted at respectively");
+        int pos = in.nextInt();
+        for (int j = pos; j < size; j++) {
+            a[j] = a[j + 1];
+        }
+        --size;
+        // printing the array after insertion
+        System.out.println("\nArray After Deletion: ");
+        for (int c = 0; c < size; c++)
+            System.out.print(a[c] + ", ");
+
+    }
+}
+
+class arrays_bubblesort {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter array size");
+        int x = in.nextInt();
+        int a[] = new int[x];
+        System.out.println("Enter elements of the array");
+        for (int i = 0; i < a.length; i++)
+            a[i] = in.nextInt();
+        // bubble sort
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    int z = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = z;
+                }
+            }
+        }
+        // printing sorted array
+        for (int c = 0; c < a.length; c++)
+            System.out.print(a[c] + ", ");
+
+    }
+}
+
+class arrays_selectionsort {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter array size");
+        int x = in.nextInt();
+        int arr[] = new int[x];
+        System.out.println("Enter elements of the array");
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = in.nextInt();
+            // selection sort algorithm
+        for (int i = 0; i < arr.length - 1; i++) {
+            int smallest = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[smallest]) {
+                    smallest = j;
+                }
+            }
+            // swap
+            int temp = arr[smallest];
+            arr[smallest] = arr[i];
+            arr[i] = temp;
+        }
+        for (int c = 0; c < arr.length; c++)
+            System.out.print(arr[c] + ", ");
+
+    }
+}
+

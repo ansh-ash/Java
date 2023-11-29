@@ -2,6 +2,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "arrays_bubblesort",
+            "request": "launch",
+            "mainClass": "arrays_bubblesort",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "arrays_deletion",
+            "request": "launch",
+            "mainClass": "arrays_deletion",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "arrays_insertion",
+            "request": "launch",
+            "mainClass": "arrays_insertion",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "arrays",
+            "request": "launch",
+            "mainClass": "arrays",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "arrays_binary_search",
+            "request": "launch",
+            "mainClass": "arrays_binary_search",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "arrays_linear_search",
+            "request": "launch",
+            "mainClass": "arrays_linear_search",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "AlternateLetters",
+            "request": "launch",
+            "mainClass": "AlternateLetters",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "acsii_code",
+            "request": "launch",
+            "mainClass": "acsii_code",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "random_pattern4",
+            "request": "launch",
+            "mainClass": "random_pattern4",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "random_pattern3",
+            "request": "launch",
+            "mainClass": "random_pattern3",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "random_pattern2",
+            "request": "launch",
+            "mainClass": "random_pattern2",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "random_pattern",
+            "request": "launch",
+            "mainClass": "random_pattern",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "middle_digit",
             "request": "launch",
             "mainClass": "middle_digit",
