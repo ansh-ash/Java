@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NumberPattern",
+            "request": "launch",
+            "mainClass": "NumberPattern",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "StringHandling",
+            "request": "launch",
+            "mainClass": "StringHandling",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "extractwords_printminandmixlength",
+            "request": "launch",
+            "mainClass": "extractwords_printminandmixlength",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "constantremovekrnekebaadpalindrome",
+            "request": "launch",
+            "mainClass": "constantremovekrnekebaadpalindrome",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "sum_of_diagonals_of_2d_array",
+            "request": "launch",
+            "mainClass": "sum_of_diagonals_of_2d_array",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "formation",
+            "request": "launch",
+            "mainClass": "formation",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "question8_2023",
             "request": "launch",
             "mainClass": "question8_2023",

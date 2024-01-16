@@ -2871,9 +2871,137 @@ class formation {
             System.out.println("Strings are not of equal length.");
         else {
             for (int i = 0; i < n; i++)
-                s += s1.charAt(i) + s2.charAt(i);
+                s = s + s1.charAt(i) + s2.charAt(i);
             System.out.println("Final word:- " + s);
         }
     }
+
 }
 
+class sum_of_diagonals_of_2d_array {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter equal rows and colums of the two dimensional array respectively");
+        int rows = in.nextInt();
+        int columns = in.nextInt();
+        int a[][] = new int[rows][columns];
+        System.out.println("Enter elements of array");
+        // inputting the matrix
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++)
+                a[i][j] = in.nextInt();
+        }
+        System.out.println("The matrix is");
+        // printing the matric after inputting before carrying out function
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++)
+                System.out.print(a[i][j] + " ");
+            System.out.println();
+        }
+
+        int sdl = 0;
+        int sdr = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (i == j)
+                    sdl = sdl + a[i][j];
+                // since rows and colums are of equal number...rows==columns
+                if (i + j == rows - 1)
+                    sdr = sdr + a[i][j];
+            }
+
+        }
+        System.out.println("Sum of left diagonal towards bottom right = " + sdl);
+        System.out.println("Sum of right diagonal towards bottom left = " + sdr);
+    }
+}
+
+class constantremovekrnekebaadpalindrome {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter string");
+        String str = in.nextLine();
+        String str1 = "";
+        String rev = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O'
+                    || c == 'U')
+                str1 = str1 + c;
+        }
+        System.out.println("The string after removing consonants = " + str1);
+
+        for (int j = str1.length() - 1; j >= 0; j--)
+            rev = rev + str1.charAt(j);
+
+        System.out.println(rev);
+        if (str1.equals(rev))
+            System.out.println("Is Palindrome");
+        else
+            System.out.println("Is Not Palindrome");
+
+    }
+}
+
+// this program prints the word with the most and thge least letters
+class extractwords_printminandmixlength {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a string :-");
+        String s = in.nextLine();
+        s = s + " ";
+        String word;
+        int start = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == ' ') {
+                word = s.substring(start, i);
+                start = i + 1;
+                // Print maximum length word
+                System.out.println(word);
+            }
+        }
+
+    }
+}
+
+class StringHandling {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the string argument");
+        String str = in.nextLine();
+        int x = str.length();
+        String s = "";
+        for (int i = 0; i < x; i++) {
+            if (i == 0 || str.charAt(i - 1) == ' ')
+                s = s + Character.toUpperCase(str.charAt(i));
+            else
+                s = s + str.charAt(i);
+        }
+        System.out.println(s);
+    }
+}
+
+class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        // Loop through each row
+        for (int i = 1; i <= rows; i++) {
+            int num = i;
+
+            // Loop to print each element in the row
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + " ");
+
+                // Calculate the next number for the next iteration
+                num += rows - j;
+            }
+
+            // Move to the next line after printing each row
+            System.out.println();
+        }
+    }
+}
