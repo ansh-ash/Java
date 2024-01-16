@@ -2967,7 +2967,7 @@ class extractwords_printminandmixlength {
     }
 }
 
-class StringHandling {
+class convert_first_letter_of_word_capital {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the string argument");
@@ -3005,3 +3005,4 @@ class NumberPattern {
         }
     }
 }
+
