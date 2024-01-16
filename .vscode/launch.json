@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "char_highnlow_asciivalue",
+            "request": "launch",
+            "mainClass": "char_highnlow_asciivalue",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "NumberPattern",
             "request": "launch",
             "mainClass": "NumberPattern",

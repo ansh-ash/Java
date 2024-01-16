@@ -2953,17 +2953,32 @@ class extractwords_printminandmixlength {
         String s = in.nextLine();
         s = s + " ";
         String word;
+        int maxlen = 0;
+        int minlen = s.length();
         int start = 0;
+        String sword = "";
+        String lword = "";
+        System.out.println("The words are :- ");
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == ' ') {
                 word = s.substring(start, i);
                 start = i + 1;
-                // Print maximum length word
-                System.out.println(word);
-            }
-        }
+                if (maxlen < word.length())
+                    maxlen = word.length();
+                lword = word;
+                if (minlen > word.length()) {
+                    minlen = word.length();
+                    sword = word;
+                }
 
+                System.out.println(word);
+
+            }
+
+        }
+        System.out.println("The maximum length of the word is " + maxlen + " and the word is " + lword);
+        System.out.println("The minimum length of the word is " + minlen + " and the word is " + sword);
     }
 }
 
@@ -3006,3 +3021,37 @@ class NumberPattern {
     }
 }
 
+/**
+ * Define a class to declare a character array of size ten. Accept the
+ * characters into the array and
+ * display the characters with highest and lowest ASCII (American Standard Code
+ * for Information
+ * Interchange) value. EXAMPLE:
+ * INPUT:
+ * 'R', 'z', 'q', 'A', 'N', 'p', 'm', 'U', 'Q', 'F' OUTPUT :
+ * Character with highest ASCII value = z
+ * Character with lowest ASCII value = A
+ */
+class char_highnlow_asciivalue {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        char a[] = new char[10];
+        System.out.println("Enter 10 characters");
+        for (int i = 0; i < 10; i++)
+            a[i] = in.next().charAt(0);
+        int high = a[0], low = a[0];
+        String hres = "";
+        String sres = "";
+        for (int i = 0; i < 10; i++) {
+            if (high < a[i]) {
+                high = a[i];
+                hres = "Highest Character is " + a[i];
+            } else if (low > a[i]) {
+                low = a[i];
+                sres = "Smallest Character is " + a[i];
+            }
+        }
+        System.out.println(hres + "\n" + "Character with highest ASCII value = " +
+                high + "\n" + sres + "\n" + "Character with lowest ASCII value = " + low);
+    }
+}
