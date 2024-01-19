@@ -3055,3 +3055,24 @@ class char_highnlow_asciivalue {
                 high + "\n" + sres + "\n" + "Character with lowest ASCII value = " + low);
     }
 }
+
+class reverse_class {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter word:-");
+        String str = in.nextLine();
+        String reverse = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isUpperCase(c) == true)
+                c = Character.toLowerCase(c);
+            else if (Character.isLowerCase(c) == true)
+                c = Character.toUpperCase(c);
+            reverse = reverse + c;
+        }
+
+        System.out.println("Reversed string:- " + reverse);
+    }
+}
+
+// this program will help find out the number of pairs of same letter

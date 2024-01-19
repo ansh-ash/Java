@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "stringpairs",
+            "request": "launch",
+            "mainClass": "stringpairs",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "reverse_class",
+            "request": "launch",
+            "mainClass": "reverse_class",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "char_highnlow_asciivalue",
             "request": "launch",
             "mainClass": "char_highnlow_asciivalue",
