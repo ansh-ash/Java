@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=PrintOverload
-comment0.text=Question\ 3\r\nDefine\ a\ class\ to\ overload\ the\ function\ print\ as\ follows\:\ \ \r\nvoid\ print()\ \ \ \ \ to\ print\ the\ following\ format\ \ \r\n\ \ \ \ \ 1\ \ \ \ \ 1\ \ \ \ \ 1\ \ \ \ \ 1\ \ \ \r\n\ \ \ \ \ 2\ \ \ \ \ 2\ \ \ \ \ 2\ \ \ \ \ 2\ \r\n\ \ \ \ \ 3\ \ \ \ \ 3\ \ \ \ \ 3\ \ \ \ \ 3\ \r\n\ \ \ \ \ 4\ \ \ \ \ 4\ \ \ \ \ 4\ \ \ \ \ 4\ \r\n\ \ \ \ \ 5\ \ \ \ \ 5\ \ \ \ \ 5\ \ \ \ \ 5\ \r\nvoid\ print(int\ n)\ \ \ To\ check\ whether\ the\ number\ is\ a\ lead\ number.\ A\ \r\nlead\ number\ is\ the\ one\ whose\ sum\ of\ even\ digits\ are\ \r\nequal\ to\ sum\ of\ odd\ digits.\ \r\n\ \ \ \ \ e.g.\ 3669\ odd\ digits\ sum\ \=\ 3\ +\ 9\ \=\ 12\ \r\n\ \ \ \ \ \ \ even\ digits\ sum\ \=\ 6\ +\ 6\ \=\ 12\ \r\n3669\ is\ a\ lead\ number.*
-comment1.params=
-comment1.target=void\ print()
-numComments=2

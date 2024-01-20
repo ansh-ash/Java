@@ -1,33 +1,33 @@
+/*Question 6
+Define a class to accept a String and print the number of digits, alphabets and special 
+characters in the string. 
+Example: S = “KAPILDEV@83” 
+Output: Number of digits – 2 
+  Number of Alphabets – 8  
+  Number of Special characters – 1 **/
 
-/**
- * Write a description of class Question6 here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Question6
-{
-    // instance variables - replace the example below with your own
-    private int x;
+import java.util.*;
 
-    /**
-     * Constructor for objects of class Question6
-     */
-    public Question6()
-    {
-        // initialise instance variables
-        x = 0;
+public class Question6 {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter a string");
+    String s = in.nextLine();
+    int dcount = 0;
+    int acount = 0;
+    int scount = 0;
+    char c;
+    for (int i = 0; i < s.length(); i++) {
+      c = s.charAt(i);
+      if (Character.isDigit(c) == true)
+        dcount++;
+      else if (Character.isLetter(c) == true)
+        acount++;
+      else if (Character.isLetter(c) == false && Character.isDigit(c) == false)
+        scount++;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    System.out.println("Number of digits - "+dcount);
+    System.out.println("Number of Alpabets - "+acount);
+    System.out.println("Number of Special characters - "+scount);
+  }
 }

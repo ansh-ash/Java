@@ -8,27 +8,27 @@ class Eshop {
    void accept() {
       Scanner in = new Scanner(System.in);
       System.out.print("Enter name of item: ");
-      this.name = in.nextLine();
+      name = in.nextLine();
       System.out.print("Enter price of item: ");
-      this.price = in.nextDouble();
+      price = in.nextDouble();
    }
 
    void calculate() {
-      if (this.price >= 1000.0 && this.price <= 25000.0) {
-         this.amt = this.price - this.price * 5.0 / 100.0;
-      } else if (this.price >= 25001.0 && this.price <= 57000.0) {
-         this.amt = this.price - this.price * 7.5 / 100.0;
-      } else if (this.price >= 57001.0 && this.price <= 100000.0) {
-         this.amt = this.price - this.price * 10.0 / 100.0;
-      } else if (this.price > 100000.0) {
-         this.amt = this.price = this.price * 15.0 / 100.0;
+      if (price >= 1000.0 && price <= 25000.0) {
+         amt = price - price * 5.0 / 100.0;
+      } else if (price >= 25001.0 && price <= 57000.0) {
+         amt = price - price * 7.5 / 100.0;
+      } else if (price >= 57001.0 && price <= 100000.0) {
+         amt = price - price * 10.0 / 100.0;
+      } else if (price > 100000.0) {
+         amt = price = price * 15.0 / 100.0;
       }
 
    }
 
    void display() {
-      System.out.println("Name of item: " + this.name);
-      System.out.println("Net amount to be paid: " + this.amt);
+      System.out.println("Name of item: " + name);
+      System.out.println("Net amount to be paid: " + amt);
    }
 
    public static void main(String[] args) {

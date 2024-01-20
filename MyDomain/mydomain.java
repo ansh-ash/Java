@@ -1368,7 +1368,7 @@ class Student {
     public static void main(String args[]) {
 
         {
-            Student ob = new Student();
+            question3 ob = new question3();
             ob.accept();
             ob.allocation();
             ob.print();
