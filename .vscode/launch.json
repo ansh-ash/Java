@@ -2,6 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "question6",
+            "request": "launch",
+            "mainClass": "question6",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "question4",
+            "request": "launch",
+            "mainClass": "question4",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "question5",
+            "request": "launch",
+            "mainClass": "question5",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "question7",
+            "request": "launch",
+            "mainClass": "question7",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
+            "name": "question8",
+            "request": "launch",
+            "mainClass": "question8",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "stringpairs",
             "request": "launch",
             "mainClass": "stringpairs",
