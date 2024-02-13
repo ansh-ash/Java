@@ -3076,3 +3076,19 @@ class reverse_class {
 }
 
 // this program will help find out the number of pairs of same letter
+
+class same_letter_class {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = in.nextLine();
+        int ctr = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                ctr++;
+                i++;
+            }
+            System.out.println("Number of pairs of same letters = " + ctr);
+        }
+    }
+}

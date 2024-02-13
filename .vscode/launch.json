@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "same_letter_class",
+            "request": "launch",
+            "mainClass": "same_letter_class",
+            "projectName": "Java_f0a153e3"
+        },
+        {
+            "type": "java",
             "name": "Question4",
             "request": "launch",
             "mainClass": "Question4",
