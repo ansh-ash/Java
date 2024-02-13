@@ -3092,3 +3092,82 @@ class same_letter_class {
         }
     }
 }
+
+class replace_vowel {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter word:- ");
+        String str = in.nextLine();
+        String z = "";
+        int ch;
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            c = Character.toLowerCase(c);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                ch = ((int) c) + 1;
+                c = (char) ch;
+            }
+            z = z + c;
+        }
+        System.out.println("New word:- " + z);
+    }
+}
+
+class cool_program {
+    void polygon(int n, char ch) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++)
+                System.out.print(ch);
+            System.out.println();
+        }
+    }
+
+    void polygon(int x, int y) {
+        for (int i = 1; i <= x; i++) {
+            for (int j = 1; j <= y; j++)
+                System.out.print("@");
+            System.out.println();
+        }
+    }
+
+    void polygon() {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= i; j++)
+                System.out.print('*');
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        cool_program ob = new cool_program();
+        System.out.println("Enter" + "\n" + "1 for making a filled square" + "\n" + "2 for making a rectangle" + "\n"
+                + "3 for a triangle");
+        int choice = in.nextInt();
+        int n, x, y;
+        char ch;
+        switch (choice) {
+            case 1:
+                System.out.println(
+                        "Enter the side of square followed by the character with which you want to make the square with");
+                n = in.nextInt();
+                ch = in.next().charAt(0);
+                ob.polygon(n, ch);
+                break;
+
+            case 2:
+                System.out.println(
+                        "Enter the rows of rectangle followed by the columns with which you want to make the rectangle with");
+                x = in.nextInt();
+                y = in.nextInt();
+                ob.polygon(x, y);
+                break;
+
+            case 3:
+                ob.polygon();
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
